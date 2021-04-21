@@ -1,4 +1,4 @@
-
+// external javascript code for lightbulb
         // sw stands for switch
         function lightBulb(sw) {
             var onOff;
