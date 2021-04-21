@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb</title>
+</head>
+<body>
+
+    <script>
+        // sw stands for switch
+        function lightBulb(sw) {
+            var onOff;
+            if(sw == 0) {
+                onOff = "lightbulb/pic_bulboff.gif";
+            }
+            else {
+                onOff = "lightbulb/pic_bulbon.gif";
+            }
+            
+            // 'myImage' are came from the id of img element in html
+            document.getElementById('myImage').src = onOff;
+
+        }
+
+    </script>
+
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can change HTML attribute values.</p>
+
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+
+    <!-- this is the inline javascript -->
+    <!-- <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button> -->
+
+    <img id="myImage" src="lightbulb/pic_bulboff.gif" style="width:100px">
+
+    <p>                 
+        <!--lightBulb(1) 1 are came from sw parameter 
+            form the fcuntion lightBulb(sw) as well the lightBulb(0)
+        lightBulb(1) is determine if the bulb image is on and
+        lightBulb(0) is determine if the bulb image is off
+        -->
+        <button onclick="lightBulb(1)">Turn on</button>
+        <button onclick="lightBulb(0)">Turn off</button>
+    </p>
+
+   
+
+    
+</body>
+</html>
+
+<!-- soucrce:
+            https://www.w3schools.com/js/tryit.asp?filename=tryjs_intro_lightbulb            
+-->
