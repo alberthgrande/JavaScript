@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Change Color Javascript </title>
+<style type="text/css">
+      div {
+         height: 200px;
+         line-height: 200px;
+         color: white;
+         text-align: center;
+         padding-left: 20px;
+         padding-right: 20px;
+      }
+   </style>
+
+</head>
+<body>
+        <div onclick = "changeColors(this)" style="background-color: red; " >Change Colors of the div tag</div>
+
+
+
+<script>
+
+function changeColors(element){
+    var currentColor = element.style.backgroundColor;
+    if(currentColor == "red"){
+      element.style.backgroundColor = "green";
+} else {
+
+element.style.backgroundColor = "red";
+
+}}
+
+
+
+
+</script>
+</body>
+</html>
