@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Head Evenlistener</title>
+<script>
+   document.getElemetById("btn").addEventListener("click", function() {
+   document.getElemetById("demo").innerhtml = "Hello Earth!";
+
+}); 
+</script>
+</head>
+<body>
+   <p> This would not work because the event listener loaded first before the HTML element. </p>
+   <p id="demo"> Hello World! </p>
+   <button id="btn"> Change Value </button>
+</body>
+</html>
