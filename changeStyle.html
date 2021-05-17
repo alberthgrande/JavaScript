@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Change Text Style</title>
+
+<style>
+#demo {
+   color:orange;
+   background-color: black; 
+}
+button {
+border-radius: 3px; 
+padding: 3px;
+outline:none;
+box-shadow: .7px .7px 5px 5px gray; 
+margin-left: 3px;
+}
+</style>
+</head>
+<body>
+       <p id="demo"> Hello World </p>
+       <button type="button" onclick="styleFunc()"> Change Style </button>
+       <button type="button" onclick="show()">Show</button>
+       <button type="button" onclick="hide()">Hide</button>
+
+
+<script>
+function styleFunc() {
+document.getElementById("demo").style.color = "green";
+document.getElementById("demo").style.fontSize = "25px";
+document.getElementById("demo").style.fontWeight = "Bold";
+document.getElementById("demo").style.fontStyle = "Italic";
+}
+
+function show() {
+document.getElementById("demo").style.display = "block";
+}
+
+function hide() {
+document.getElementById("demo").style.display = "none";
+}
+</script>
+</body>
+</html>
+
