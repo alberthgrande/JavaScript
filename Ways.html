@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>4ways to make an output in Javascript</title>
+</head>
+<body>
+        <p> 4 Ways to make an Output in Javascript </p>
+        <p id="demo"></p>
+        <button type="button" onclick="ways1()">Ways 1!</button>
+        <button type="button" onclick="ways2()">Ways 2!</button>
+        <button type="button" onclick="ways3()">Ways 3!</button>
+        <button type="button" onclick="ways4()">Ways 4!</button>
+<script>
+// innerHTML
+function ways1() {
+    document.getElementById("demo").innerHTML = "HELLO WORLD!";
+
+}
+
+
+// consile.log();
+function ways2() {
+  var x = 5;
+  var y = 5;
+  var sum = x + y; 
+  console.log(sum);
+}
+
+// alert();
+function ways3() {
+  var x = 5;
+  var y = 5;
+  var sum = x + y; 
+  alert(sum);
+}
+
+// document.write()
+function ways4() {
+  var x = 5;
+  var y = 5;
+  var sum = x + y; 
+  document.write(sum);
+}
+</script>
+<body>
+</html>
