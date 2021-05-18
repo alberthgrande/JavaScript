@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>JavaScript Comments</title>
+</head>
+<body>
+      <p id="demo"></p> 
+      <button type="button" onclick="sumFunc()">Show Sum!</button>
+      <button type="button" onclick="productFunc()">Show Product!</button>
+<script>
+        // function for addtion
+        function sumFunc() {
+           var x = 5;
+           var y = 5;
+           var sum = x + y; 
+           // for sum output
+           document.getElementById("demo").innerHTML = sum;  
+       }
+      /* function for multiplication */
+      function productFunc() {
+           var x = 5;
+           var y = 5;
+           var product = x * y; 
+           /* for product output */
+           document.getElementById("demo").innerHTML = product; 
+       }
+      </script>
+</body>
+</html>
