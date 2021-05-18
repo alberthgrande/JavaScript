@@ -9,7 +9,7 @@
       <button type="button" onclick="minus()">-</button>
       <button type="button" onclick="divide()">/</button>
       <button type="button" onclick="multi()">*</button>
-
+      <hr>
       <script>
        function add() {
        var x = 5;
@@ -39,7 +39,52 @@
        document.getElementById("demo").innerHTML = multi;
 }
 
+      // Javascript arithmetic operators
+      var x = 10;
+      var y = 10;
+   // for addtion
+      document.write("Addition ", x + y);
+   // for division 
+      document.write("<br>Division ", x / y);
+   // for multiplication 
+      document.write("<br>Multiplication ", x * y);
+   // for subtraction 
+      document.write("<br>Subtraction ", x - y);
+   // for exponentiation
+      document.write("<br>Exponentiation ", x ** y);
+   // for remainder 
+      document.write("<br>Remainder ", x % y);
+   // for increment
+      x++;
+      document.write("<br>Increment ", x);
+     // for decrement
+      y--; 
+      document.write("<br>Decrement ", y);
+      document.write("<hr>Operator Sequence"); 
+      var a = 1, b = 2, c = 3 , total = 0;
+      total = a + b * c; 
+      document.write("<br>Total ", total); 
+      /*
+       As may notice the result of expression above is 7.
 
+       It is because multiplication is performed first before addition.
+
+       Javascript follow the pattern mdas in math, where multiplication is perform first, division is second,  addition is third and subtraction is fourth or last. 
+
+       2 * 3 = 6, and then 1 + 6 = 7.
+
+       But what if we need a certain operator to be performed first?
+
+       For example, what if we want addtion to be performed first in our previous example ?
+
+       We can use grouping to do that, grouped expressions are performed first before the others.
+ 
+       Use parentheses () to group expressions.
+
+      */
+       var x = (1 + 2) * 3;
+       // because 1 + 2 is 3, and then 3 * 3 is 9
+       document.write("<br> Total of x ", x);   
      </script>
 </body>
 </html>
