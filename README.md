@@ -1,3 +1,3 @@
 # JavaScript
 
-This is a contain Javascript lesson.
+Javascript lesson.
