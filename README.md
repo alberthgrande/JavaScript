@@ -2,4 +2,4 @@
 
 Javascript lesson.
 
-Update Arithmetic Operators.
+Updating Arithmetic Operators.
