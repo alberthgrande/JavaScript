@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Javascript Datatypes</title>
+</head>
+<body>
+      <p id="demo"></p>
+      <button type="button" onclick="dataString()">Data String</button>
+
+      <hr>
+
+      <p id="num"></p>
+      <button type="button" onclick="dataDigit()">Data Digit</button>
+
+      <hr>
+
+      <p id="bool"></p>
+      <button type="button" onclick="dataBool()">Data Bool</button>
+      
+      <hr>
+
+<script>
+  /* function for string only */
+  function dataString() {
+  // string content with single quote and double qoutes
+  var hi = 'Hi'; 
+  var hello = "Hello";
+  document.getElementById("demo").innerHTML = hi + " " + hello; 
+  //document.getElementById("demo").innerHTML = hello; 
+}
+  /* function for integer and float number */
+  function dataDigit() {
+  var int = 5;
+  var float = 5.5;4
+  var total = int + float; 
+  // for integer number and to float numbet
+  document.getElementById("num").innerHTML = 
+  int + " + " + float +
+  "<br> Total of sum and float is  = " + total; 
+
+}
+  /* funtion for boolen which is contain of True and False */
+  function dataBool() {
+  var boolTrue = true; 
+  var boolFalse = false; 
+
+  document.getElementById("bool").innerHTML =
+  "is 1 + 1 = 2 ? " + boolTrue + "<br>" +
+  "is 10 * 10 = 1000 ? " + boolFalse + "<br><br>"; 
+
+}
+  var fruits = " apple ";
+  document.write(fruits);
+</script>
+</body>
+</html>
