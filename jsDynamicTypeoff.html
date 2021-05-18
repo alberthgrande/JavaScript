@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>JavaScript Dynamic And typeoff</title>
+</head>
+<body>
+      <p id="demo"></p>
+      <p id="demo1"></p>
+
+      <script>
+        var text = "Hello World! "; //string
+        text = true; // boolean
+        text = 100; // integer
+        document.getElementById("demo").innerHTML = text; 
+        // for typeof
+        document.getElementById("demo1").innerHTML =
+        typeof "Hello World. " + "<br>" + 
+        typeof 22 + "<br>" +
+        typeof true + "<br>" +
+        typeof undefined + "<br>" + 
+        typeof null + "<hr>";
+      </script>
+</body>
+</html>
