@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Javascript Comparison Operators  </title>
+</head>
+<body>
+
+   <h3> Javascript Comparison Operators </h3>
+   <p> Equality Operators </p> 
+   <p id="demo"></p>
+   <hr>
+   <p> Inequality Operators </p>
+   <p id="demo1"></p>
+   <hr>
+   <p> Identity Operators </p>
+   <p id="demo2"></p>
+  
+   <script>
+      document.getElementById("demo").innerHTML = 
+      (2 == 2)   /* returns true */ + "<br>" +
+      (2 == 4)   /* returns false */ + "<br>" +
+      ("2" == 2) /* returns true */ + "<br>" +
+      ("Hello world" == "Hello world")     /* returns true */ + "<br>" +
+      ("Hello world" == "Hello everyone"); /* returns false */
+   </script>
+   
+   <!-- for inequality operators -->
+   <script>
+   document.getElementById("demo1").innerHTML =
+   (2 != 2) + "<br>" +
+   (2 != 4) + "<br>" +
+   ("2" != 2) + "<br>" +
+   ("Hello world" != "Hello world") + "<br>" +  
+   ("Hello world" != "Hello everyone") ;
+   </script>
+
+   <!-- for identity operator -->
+   <script>
+    /*
+      The identity operator (===), also also known as "strict equality" operator, 
+      returns true if its operands are equal and of the same type. 
+
+      The example bellow returns true because 
+      the two operands are equal and are the same type. 
+    */
+      document.getElementById("demo2").innerHTML =  (2===2);
+      /* 
+       The example below returns false because 
+       the operator are equal but are not the same type.
+      */
+       document.write(("2"===2));
+   </script>
+</body>
+</html>
