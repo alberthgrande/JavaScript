@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>JavaScript Functions</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <h4>JavaScript Fucntions</h4>
+        <p>
+            <b>Fucntions</b> are one of the fundamental building blocks of JavaScript. <br>
+            A fucntion is a <b>JavaScript Method</b><br>
+            It is a set of statements that performs a taks or produces a value. <br>
+            It is executed when it is invoked (called) by something. <br>
+        </p>
+
+        <h4>Fucntion Definitions</h4>
+        <p>
+            A JavaScript fucntiion is defined or declared using the fucntion keyword, followed by:
+            <ul>
+                <li>The name of the function.</li>
+                <li>A list of paramenters (optional) enclosed in parentheses ( ). Multiple parameters are separeated by commas ( , ).</li>
+                <li>The block of the codes or statements enclosed in curly bracess { }.</li>
+            </ul>
+
+            Parameters act as <b>placeholders</b> inside the function. <br>
+            When the fucntion is called, the variables are assigned to the <b>arguments</b> provided when the fucntion is called. 
+
+        </p>
+        <h4>Calling a Fucntion</h4>
+        <p>
+            Function will only be executed when they are <b>called</b> or invoked. <br>
+            A Fucntion can be called inside a JavaScript program, just like what we did in the previous examples <br>
+            A fucntion can be called when an event happens, most commonly when a button is clicked.
+        </p>
+
+        
+        <p>
+            Sample Output: 
+        </p>
+
+        <p id="demo"></p>
+        <script>
+            /* defining the fucntion */
+            function writeText(str) {
+                document.getElementById("demo").innerHTML = str; // str is parameters or arguments
+            }
+
+            /* calling the fucntion */
+            writeText("Hello World!");
+        </script>
+        
+        <p id="add"></p>
+        <script>
+            
+            // adding number using function
+            function addNumbers(num1, num2) {
+               var sum = num1 + num2;
+                document.getElementById("add").innerHTML = sum;
+            }
+
+            // calling fucntion
+            addNumbers(5 , 1);
+        </script>
+
+        <p id="button"></p>
+        <button type="button" class="btn btn-sm btn-info" onclick="sumNumbers(2,5);">Click to print output!</button>
+        <!-- script for button -->
+        <script>
+            function sumNumbers(num1, num2) {
+                var sum = num1 + num2;
+                document.getElementById("button").innerHTML = sum;
+            }
+        </script>
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
