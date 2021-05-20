@@ -61,6 +61,33 @@
         document.write("<br><br>");
        document.write(4 !== 4);
    </script>
+   <!-- 
+       for greater than operator
+       
+       The greater than operator (>) returns true if
+       the left operand is greater than the right operand.
+
+    -->
+    <hr>
+    <p>Greater than Operator</p>
+    <p id="greater"></p>
+
+    <p>Greater than equal Operator</p>
+    <p id="gequal"></p>
+    <script>
+        document.getElementById("greater").innerHTML =
+            (2 > 1) + "<br>" + // returns true
+            (1 > 2) + "<br>" + // returns false
+            (2.25 > 2.24) + "<br>" + // returns true
+            (2.24 > 2.25);          // returns false
+
+        document.getElementById("gequal").innerHTML = 
+        (4 >= 1) + "<br>" + // returns true
+        (1 >= 4) + "<br>" + // returns false
+        (1 >= 1) + "<br>" + // returns true
+        (1.25 >= 1.24) + "<br>" + // returns true
+        (1.24 >= 1.25); // returns false
+    </script>
    
 </body>
 </html>
