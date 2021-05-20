@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>JavaScript Comparison & Conditional Operations</title>
+   <style>
+         
+     body {
+      font-family: arial, sans-serif;
+     }
+     table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+      }
+
+      td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+      }
+      tr:nth-child(even) {
+            background-color: #dddddd;
+      }
+   </style>
+</head>
+<body>
+
+      <h3>JavaScript Comparison & Conditional Operations</h3>
+      <p>
+            <b>Logial operators</b> are commonly used with <b>Booleans</b>.
+            
+            When they are used with Boolean (logical) values
+            they return a Boolean value. <br><br>
+
+            In JavaScript, there are 3 Logical Operators.
+
+      </p><br>
+
+      <table>
+                  <tr>
+                        <th>Name</th>
+                        <th>Operator</th>
+                        <th>Usage</th>
+                  </tr>
+  
+            
+                  <tr>
+                        <td>Logical AND</td>
+                        <td>&&</td>
+                        <td>Expression1 && Expression1</td>
+                  </tr>
+                  <tr>
+                        <td>Logical AND</td>
+                        <td>Logical OR</td>
+                        <td>Logical NOT</td>
+                  </tr>
+                  <tr>
+                        <td>Logical AND</td>
+                        <td>Logical OR</td>
+                        <td>Logical NOT</td>
+                  </tr>   
+      </table><br>
+
+      <p>
+            LOGICAL AND (&&) <br><br>
+            The Logical AND (&&) operator returns true if 
+            <b>both operands</b> (which are expressions) are true.
+
+      </p>
+
+      <p id="and"></p>
+      <script>
+            document.getElementById("and").innerHTML = 
+            (true && true) + "<br>" + // returns true
+            (true && false) + "<br>" + // returns false
+            (1 == 1 && 2 == 2) + "<br>" + // returns true
+            (1 == 2 && 2 == 2) + "<br>" + // returns false
+            (1 > 2 && 2 < 1) + "<br>" + // returns false
+            (2 > 1 && 1 < 2);  // returns true
+
+      </script><hr>
+      
+      <p>
+            LOGICAL OR (||) <br><br>
+            The logical OR (||) operator returns true if either of the operand is true.
+      </p>
+
+      <p id="or"></p>
+      <script>
+            document.getElementById("or").innerHTML = 
+            (true || true) + "<br>" + // returns true
+            (true || false) + "<br>" + // returns true
+            (1 == 2 || 1 == 1) + "<br>" + // returns true
+            (1 == 2 || 2 == 1) + "<br>" + // returns false
+            (1 > 2 || 4 < 3)  + "<br>" + // returns false
+            (1 < 2 || 4 > 3);
+      </script><hr>
+
+      
+      <p>
+            LOGICAL NOT ( ! ) <br><br>
+            The logical not ( ! ) operator returns true if the operand is not true.
+      </p>
+
+      <p id="not"></p>
+      <script>
+            document.getElementById("not").innerHTML =
+            !(true) + "<br>" +      // returns false
+            !(false) + "<br>" +     // returns true
+            !(1 == 1) + "<br>" +    // returns false
+            !(1 > 2);               // returns true
+      </script>
+
+      <hr>
+      <p> comparing the value of x to y if it is true or false</p>
+      <script>
+       var x = 1; 
+       var y = 2;
+       document.write(x==y); 
+      </script>
+</body>
+</html>
