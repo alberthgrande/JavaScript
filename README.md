@@ -2,6 +2,8 @@
 
 Javascript lesson.
 
-Update Arithmetic Operators.
+Updated Arithmetic Operators.
 
-Comparison Operators still working. 
+Updated Comparison Operators.
+
+Logical operator is updating...
