@@ -61,11 +61,15 @@
         document.write("<br><br>");
        document.write(4 !== 4);
    </script>
+   
    <!-- 
        for greater than operator
        
        The greater than operator (>) returns true if
        the left operand is greater than the right operand.
+
+       The greater than or equal operator (>=) returns
+       true if the left operand is greater than or equal to the right operand.
 
     -->
     <hr>
@@ -88,6 +92,38 @@
         (1.25 >= 1.24) + "<br>" + // returns true
         (1.24 >= 1.25); // returns false
     </script>
-   
+
+     <!-- 
+       for less than operator
+       
+       The less than operator (<) returns true if the
+       left operand is less than the right operand.
+
+       The less than or equal operator (<=) returns
+       true if the left operand is less than oe equal to the right operand.
+
+    -->
+
+    <hr>
+    <p>Less than Operator</p>
+    <p id="less"></p>
+
+    <p>Less than equal Operator</p>
+    <p id="lequal"></p>
+
+    <script>
+        document.getElementById("less").innerHTML = 
+        (1 < 2) + "<br>" + // returns true
+        (3 < 2) + "<br>" + // returns false
+        (1.25 < 1.24) + "<br>" + // returns false
+        (1.24 < 1.25); // returns true
+
+        document.getElementById("lequal").innerHTML = 
+        (1 <= 2) + "<br>" + // retuns true
+        (2 <= 1) + "<br>" + // returns false
+        (2 <= 2) + "<br>" + // retuns true
+        (1.24 <= 1.25) + "<br>" + // retuns true
+        (1.25 <= 1.24); // returns true
+    </script>
 </body>
 </html>
