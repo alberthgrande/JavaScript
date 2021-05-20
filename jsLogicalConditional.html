@@ -109,8 +109,44 @@
             !(false) + "<br>" +     // returns true
             !(1 == 1) + "<br>" +    // returns false
             !(1 > 2);               // returns true
+      </script><hr>
+
+      <div>
+            <h4>Using Logical Operator with Conditional Statement</h4>
+            Logical operators are commonly used with <b>conditional statements</b>. <br><br>
+            The example below, shows how to use a logical operator in an " if " statement.
+      </div><br>
+
+      <script>
+            if(3 == 3 && 4 == 4) {
+                  document.write("The condition is true.");
+            }
+
+            if(3 == 4 && 4 == 4) {
+                  document.write("The condition will not be printed because the condtion is false.");
+            } 
+      </script><hr>
+
+      <div>
+            <h4>JavaScript Conditional (Ternary) Operator</h4>
+            The conditional or the ternary operator is the only operator that takes three operands.<br>
+            condtion  ? value1 : value2 <br><br>
+            
+            This is commonly used with a variable. <br><br>
+
+            Since the testScore is more than 75, then the value is "Passed" was assigned to the testResult variable. <br><br>
+
+            if the testScore is less than 75, the value "Failed" will be assigned instead.
+      </div><br>
+
+      <p id="ternary"></p>
+      <script>
+            var testScore = 80;
+            var testResult = (testScore > 75) ? "Passed" : "Fialed";
+            document.getElementById("ternary").innerHTML = testResult;
       </script>
 
+      <!-- Sample -->
       <hr>
       <p> comparing the value of x to y if it is true or false</p>
       <script>
