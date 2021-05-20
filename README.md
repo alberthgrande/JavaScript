@@ -6,4 +6,4 @@ Updated Arithmetic Operators.
 
 Updated Comparison Operators.
 
-Updated Logical Condistional.
+Updated Logical Conditional.
