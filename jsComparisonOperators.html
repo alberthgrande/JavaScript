@@ -12,7 +12,7 @@
    <p> Inequality Operators </p>
    <p id="demo1"></p>
    <hr>
-   <p> Identity Operators </p>
+   <p> Identity Operators (===)</p>
    <p id="demo2"></p>
   
    <script>
@@ -34,21 +34,33 @@
    ("Hello world" != "Hello everyone") ;
    </script>
 
-   <!-- for identity operator -->
+   <!-- for identity operator and non-identity operator -->
    <script>
     /*
       The identity operator (===), also also known as "strict equality" operator, 
       returns true if its operands are equal and of the same type. 
-
       The example bellow returns true because 
       the two operands are equal and are the same type. 
     */
-      document.getElementById("demo2").innerHTML =  (2===2);
+        document.getElementById("demo2").innerHTML =  (2===2);
       /* 
        The example below returns false because 
        the operator are equal but are not the same type.
       */
-       document.write(("2"===2));
+        document.write(("2"===2));
+        document.write("<br><br>None-identity Operator (!==) ");
+        /*
+            The none-identity operator (!==), also known as strict Inequality operator,
+            returns true is its operands are of the "not of the same type" and/or "not equal".    
+        */
+       document.write("<br><br>");
+       document.writeln("4" !== 4); // return true
+        /*
+            The example below returns false because the two operands are "equal" and are of the same type.
+        */
+        document.write("<br><br>");
+       document.write(4 !== 4);
    </script>
+   
 </body>
 </html>
