@@ -114,25 +114,65 @@
             }
             var fullname = returnFullname("Hi", "Hello");
             document.write("<br><br>",fullname);
+        </script><hr>
+
+        <h4>Funtion Scope</h4>
+        <p>
+            Variables declared inside a function are called <b>local variables</b><br>
+            Local varibles can only be used inside the function where it was declared. <br>
+            if a local variable is used ouside, the value's data type is <i>undefined</i>. <br>
+            Notice that nothing will be printed on the paragraph element with the demo2 id, because the name variable cannot be used outside the function.
+        </p>
+
+        <p id="demo1">That output will print here!</p>
+        <p id="demo2">No output will be diplayed because the variable used is in local varible</p>
+        <button class="btn btn-sm btn-info" type="button" onclick="getAge(22)">Click to show output !</button>
+        <script>
+            function getAge(age) {
+                var fullname = "Hi Hello!";
+
+                document.getElementById("demo1").innerHTML = fullname + " is " + age + " years old.";
+            }
+
+            document.getElementById("demo").innerHTML = fullname;
+        </script><hr>
+
+        <h4>Global variables</h4>
+        <p>
+            <b>Global variables</b> can be used by any function. <br>
+            Global variables are variables declared outside a function. <br>
+            For example, the <i>fruit</i> variable below is declare outside a fucntion. <br>
+            Therefore, it can be used by any function.
+        </p>
+
+        <p id="demo6"></p>
+        <button class="btn btn-sm btn-info" type="button" onclick="fruits(22)">Click to show output !</button>
+        <script>
+            var fruit = "apple";
+
+            function fruits() {
+                document.getElementById("demo6").innerHTML = "My favorite fruit is " + fruit;
+            }
+        </script><hr>
+
+        <h4>Why Use Functions</h4>
+        <p>
+            Functions in JavaScript are just like tools in real life. They make coding easier. <br>
+            Instead of writing a block of codes over and over again, we can just reuse the same code many times. <br>
+            The fucntion below converts <b>kilometer to miles.</b> <br>
+            You can use the function as many as you want.
+        </p>
+
+        <p id="demo7"></p>
+        <script>
+            function toMiles(kilometer) {
+                var miles = kilometer * 0.62137;
+                return kilometer + " kilometer/s " + " equals " + miles + " miles.";
+            }
+            // call the function
+            alert(toMiles(3));
+            document.getElementById("demo7").innerHTML = toMiles(10);
         </script>
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     </div>
