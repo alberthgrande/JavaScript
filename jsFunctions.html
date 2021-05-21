@@ -42,7 +42,7 @@
             A fucntion can be called when an event happens, most commonly when a button is clicked.
         </p>
 
-        
+
         <p>
             Sample Output: 
         </p>
@@ -80,6 +80,61 @@
                 document.getElementById("button").innerHTML = sum;
             }
         </script>
+
+        <hr>
+        <h4>The return Statement</h4>
+        <p>
+            The return statement used in a function to <b>stop</b> its execution and to return a value to the <b>fucntion caller.</b><br>
+            For example, the addNumbers() fucntion below retuns the <b>sum</b> of its arguments to the fucntions caller. <br>
+            Then, the function caller prints the returned value to an element. <br><br>
+
+            The example below assigns the returned value to a variable. The variable is then used in a statements.
+        </p>
+
+        <p>Sample Output:</p>
+
+        <p id="returnInner"></p>
+        <script>
+            // return inner.HTML
+            function returnInner(num1, num2) {
+                var sum = num1 + num2;
+                return sum;
+            }
+            document.getElementById("returnInner").innerHTML = returnInner(5,5);
+            // return write
+            function returnWrite(num3, num4) {
+                var sum = num3 + num4;
+                return sum;
+            }
+            document.write(returnWrite(5,7));
+
+             // for string
+            function returnFullname(firstname, lastname) {
+                return firstname + " " + lastname;
+            }
+            var fullname = returnFullname("Hi", "Hello");
+            document.write("<br><br>",fullname);
+        </script>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
