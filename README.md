@@ -8,4 +8,4 @@ Updated Comparison Operators.
 
 Updated Logical Conditional.
 
-JavaScript Funtions is still in progress...
+Updated JavaScript Funtions.
