@@ -10,6 +10,6 @@ Updated Logical Conditional.
 
 Updated JavaScript Funtions.
 
-Updated JavaScript Objects...
+Updated JavaScript Objects.
 
-Updating Javascript String...
+Updated Javascript String.
