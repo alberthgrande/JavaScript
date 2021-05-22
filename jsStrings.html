@@ -1,42 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <title>JavaScript String Operator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>JavaScript Strings</title>
 </head>
 <body>
-     
-   <script>
 
-      var text = "Lorem ipsum ";
-      var text1 = "dolor sit amet, ";
-      var text2 = "consectetur adipiscing elit";
+    <div class="container">
+        <H4>JavaScript Strings</H4>
+        <p>
+            In JavaScript, strings are pieces of the text. <br>
+            A <i><b>string</b></i> is set of characters enclosed in qoutes. <br>
+
+            <h4>Creating Strings</h4>
+            Strings can be enclosed in double qoutes ( "" ) . <br>
+            Strings can be enclosed in signle qoutes ( '' ) .
+        </p>
+        <script>
+            var str = "Hello World!";
+            document.write(str,"<br>");
+            var str1 = 'Hello World!';
+            document.write(str1);
+        </script><hr>
+
+        <h4>Single or Double qoutes</h4>
+        <p> 
+            Use <i><b>single</b></i> qoutes if your string contains <i><b>double</b></i> qoutes. <br>
+            Use <i><b>double</b></i> qoutes if your string contains <i><b>single</b></i> qoutes. <br>
+            <p id="demo"></p>
+        </p>
+        <script>
+            var str1 = "We'll win!";
+            var str2 = "Her name is 'Hello'";
+            var str3 = 'Her name is "Hi"';
+
+            document.getElementById("demo").innerHTML = 
+            str1 + "<br>" + 
+            str2 + "<br>" + 
+            str3;
+        </script>
+        <p>
+            If you do it like the example below, your code will result to an error because it will confuse the browser. <br><br>
+
+            var str = 'Everything's fine; <br>
+            document.write(str);
+        </p><hr>
+
+        <h4>Concatenating Strings</h4>
+        <p>
+            To concatenate or add strings, use the addtion operator ( + ) . <br>
+        </p>
+
+        <script>
+            // concatenation using arithmetic + operator
+            var firstName = " Hello ";
+            var lastName  = " World! ";
+            var fullname = firstName + lastName;
+            document.write(fullname);
+        </script>
+
+        <p>
+            <br> We can also concatenate strings using the <b>addition assignment</b> operator (+=) .
+        </p>
+
+        
+        <script>
+            var firstname = "Hello";
+            var lastname = " Wordl!";
+       
+            firstname+=lastname;
+       
+            document.write(firstname);
+       
+        </script>
+
+        <p>
+            <br> You can add as many strings as you want.
+        </p>
+
+        <script>
+
+            var text = "Lorem ipsum ";
+            var text1 = "dolor sit amet, ";
+            var text2 = "consectetur adipiscing elit";
+            
+            var sentence = text + text1 + text2; // concatenates the three strings
+            document.write(sentence);
+            
+         </script><hr>
+
+         <h4>Concatination Contextual Example</h4>
+         <div>
+             <p>
+                 In this example, we will create a progeam that greets the user by concatenating strings. <br>
+                 Also, we will use the <i><b>window.prompt()</b></i> to ask the user's name.
+             </p>
+             <button class="btn btn-sm btn-primary" onclick="greetings()">Let me greet you !</button>
+         </div>
+         <script>
+             function greetings() {
+                 var userName = window.prompt("Hello, welcome to the toturial. May I know your name? ");
+                 var str = "Nice to meet you " + userName + "! " + "Welcome to Codeiber, I hope you're enjoying the lessons! ";
+                 alert(str);
+             }
+         </script><hr>
+
+         <div>
+            <h4>Bad String</h4>
+            <p>
+                A bad string is a string that is not surrounded by the qoutes. <br>
+                <br> var badString1 = I am a text;
+                <br> var badString1 = "I am a text;
+                <br> var badString1 = I am a text"; <br>
+                <br> You should avoid these, because it will produce an <b>error</b>.
+            </p>
+         </div> <hr>
+
+         <div>
+             <h4>Escaping Characters</h4>
+             <p>
+                 Escaping characters is crucial in <i><b>handling strings</b></i>. <br>
+                 It helps us make sure that our strings are recognized as pieces of the text, not as part of the code. <br>
+                 To escape characters, use a backslash ( \ ) right <i><b>before the character</b></i>.
+
+                 <p id="ecap"></p>
+             </p>
+             <script>
+                 var stri1 = "She is called \"Hello\"";
+                 var stri2 = 'She is called \'World\'';
+                 var stri3 = "Escaping backslash \\";
+                 document.getElementById("ecap").innerHTML = 
+                 stri1 + "<br>" +
+                 stri2 + "<br>" +
+                 stri3;
+             </script>
+         </div>
+
+         
       
-      var sentence = text + text1 + text2; // concatenates the three strings
-      document.write(sentence);
+    </div>
 
-      
-   </script>
-
-    <hr>
-    
-    <script>
-     // concatenation using arithmetic + operator
-     var firstName = " Hi ";
-     var lastName  = " Hello";
-     var fullname = firstName + lastName;
-     document.write(fullname);
-    </script>
-
-     <hr>
-
-     <script>
-     var firstname = "Hi";
-     var lastname = " Hello";
-
-     firstname+=lastname;
-
-     document.write(firstname);
-
-     </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 </body>
 </html>
