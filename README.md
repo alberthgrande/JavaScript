@@ -1,6 +1,6 @@
 # JavaScript
 
-Javascript lesson.
+Learning Javascript lesson.
 
 Updated Arithmetic Operators.
 
