@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>JavaScript String Methods</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h4 class="card-header">JavaScript String Methods</h4>
+            <div class="card-body">
+              <h4 class="card-title">JavaScript String Methods</h4>
+              <p class="card-text">
+                  Now that we know basics of strings, let's move up and try some useful operations that we can do with it.
+              </p><hr>
+              
+              <h4 class="card-title">Strings as Objects</h4>
+              <p class="card-text">
+                  Almost everything in JavaScript is Objects. <br>
+                  When you create a string: <br>
+                  var str = "Hello World!"; <br>
+                  Your variable becomes a String object instance. <br>
+                  As a result, many properties and methods are available to it. <br> 
+              </p><hr>
+
+              <h4 class="card-title">Getting String Length</h4>
+              <p>
+                  To get the length or the number of characters in a string, use the length property.
+              </p>
+              <script>
+                var str = "codeliber";
+                var strlen = str.length;
+                document.write(strlen);
+            </script>
+            <p>
+                The example above will print 9 because the string "codeliber" is 9 characters long. <br>
+                The length property is useful, for instance, you can use it to count how many characters a user has entered in one of your text fields. <br>
+                It can help you write a program that will tell the user to shorten their entry. <br>
+            </p><hr>
+
+            <h4 class="card-title">Retrieving a Character</h4>
+            <p>
+                We can retrieve a character from a string using the <i><b>square bracket notation</b></i>. <br>
+                Simply put <i><b>square brackets []</b></i> after the variable name and write a number inside them.
+            </p>
+            <script>
+                var str = "codeliber";
+                var x = str[3];
+                document.write(x);
+            </script>
+            <p>
+                <br> You may have expected that str[3] would return the third character <i>"d"</i> from the <i>"codeliber"</i> string. <br>
+                But instead it returned the fourth character which s <i>"e"</i>. <br>
+                It is because JavaScript counts from 0 not from 1. <br>
+                Thus, 0 represents the first character, 1 represents the second character and so on. <br>
+                The number inside the square brackets is called index.
+            </p><hr>
+
+            <h4 class="card-title">Finding a Substring in a String</h4>
+            <p>
+                Sometimes, it is useful to check of a smaller string (substring) is present in a string. <br>
+                This can be done using the <i><b>indexOf()</b></i> method. <br>
+                It returns the index of the <i><b>first</b></i> occurence of a substring in a string.
+            </p>
+            <script>
+                var str = "Where are they, where did they go.";
+                var strpos = str.indexOf("they");
+                document.write(strpos);
+            </script>
+            <p>
+                <br> The <i><b>lastIndexOf()</b></i> method returns the <i><b>index</b></i> of the <i><b>last</b></i> occurence of the substring in a string.
+            </p>
+            <script>
+                var str = "Where are they, where did they go.";
+                var strpos = str.lastIndexOf("they");
+                document.write(strpos);
+            </script>
+            <p>
+                Both the <i><b>indexOf()</b></i>  and the <i><b>lastIndexOf()</b></i> methods return <i><b>-1</b></i> if there is no occurence found.
+                <p id="occur"></p>
+            </p>
+            <script>
+                var str = "Where are they, where did they go.";
+                var strpos1 = str.indexOf("codeliber");
+                var strpos2 = str.lastIndexOf("codeliber");
+                document.getElementById("occur").innerHTML = 
+                strpos1 + "<br>" + strpos2;
+            </script><hr>
+
+            <h4>The <i>search()</i> Method</h4>
+            <p>
+                The <i><b>search()</b></i> method works similarly with the <i><b>indexOf</b></i> method. <br>
+                It returns the index of the first occurence of a text in a string.
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+          </div>
+    </div>
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
