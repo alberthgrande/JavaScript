@@ -25,14 +25,14 @@
                 age: 22, <br>
                 hobbies: ["coding","playing chess", "gaming"],<br>
                 isMarried: true <br>
-            } <br><br>
+            }; <br><br>
 
             As you can see, the syntax of an object is pretty simple. <br>
             The <i>person</i> object contains <b>properties</b>. <br>
             Each property has a <i>name</i> (e.g <i>fullname, age</i>) and a <i>value</i> (e.g <i>"Hi Hello", 30</i>). <br>
             <b>Properties</b> are separated by commas ( , ). <br>
             The <i>name</i> and <i>value</i> pair are separated by a collon ( : ).
-        </p>
+        </p><hr>
 
         <h4>Methods in an Object</h4>
         <p>
@@ -48,10 +48,98 @@
                     showAge : function() { <br>
                         alert(this.age); <br>
                     } <br>
-                }
+                };
             </p>
+            <b>Note!</b> an object is a collection of <b>properties</b>  and/or methods.
+        </p><hr>
+
+        <h4>Accessing Object's Properties</h4>
+        <p>
+            There are two ways to access an object's members (properties and methods).
+        </p>
+        <h4>The Dot Notation</h4>
+        <p>
+            The Dot Notation uses to a dot ( . ) to access an object's members. <br>
+            First write  the <b>variable,</b> then the <b>name</b> fo the property method.
+        </p>
+        <p id="demo"></p>
+        <script>
+            var person = {
+                name: "Hi Hello!",
+                age: 22,
+                hobbies: ["coding","playing chess","gaming"]
+            };
+
+            document.getElementById("demo").innerHTML = 
+            person.name + "<br>" +
+            person.age + "<br>" +
+            person.hobbies[0];
+        </script>
+
+        <h4>The Bracket Notation</h4>
+        <p>
+            We can also use <b>square brackets</b> to access an object's members. <br>
+            As you may notice, the brackets contain the <b><i>names</i></b> of the properties.
+        </p>
+        <p id="demo1"></p>
+        <script>
+            var person = {
+                name: "Hello World!",
+                age : 22,
+                hobbies : ["coding","playing chess","gaming"]
+            };
+            document.getElementById("demo1").innerHTML = 
+            person["name"] + "<br>" +
+            person["age"] + "<br>" +
+            person["hobbies"][0];
+        </script>
+
+        <h4>The <i>this</i> Keyword</h4>
+        <p>
+            You may have notice the <i><b>this</b></i> keyword in one of our examples. This may look strange, but don't worry. It's easy. <br>
+            The <i><b>this</b></i> keyword refers to the current object. <br>
+            In this example, the <b>person.showDetails()</b> method is colled when the button bellow is clicked. <br>
+            In this case, <i><b>this</b></i> is equivalent to the <i><b>person</b></i> object.
+        </p>
+        <button class="btn btn-sm btn-info" type="button" onclick="person.showDetails()">Show Details</button><br>
+        <script>
+          
+                var person = {
+                    name : "Hello World!",
+                    age : 22,
+                    hobbies : ["coding","play chess", "gaming"],
+                    showDetails :  function () {
+                        alert(this.name + " is " + this.age + " years old.");
+                    }
+                };
+            
+        </script>
+
+        <h4>An Object In An Object</h4>
+        <p>
+            Yes it is possioble to put objects inside an objects. <br>
+            As you may notice, we accessed the <i><b>color</b></i> property using <i>fruits.mango.color</i>.
 
         </p>
+
+        <script>
+            var fruits = {
+                mango: {
+                    color: "yellow",
+                    taste: "sweet" 
+                },
+                apple: {
+                    color: "red",
+                    taste: "sweet"
+                }
+            }
+            document.write(fruits.mango.color);
+            document.write(fruits.apple.taste);
+        </script>
+
+
+
+
     </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
