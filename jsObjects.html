@@ -1,26 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <title>Javascript Object Datatype</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>JavaScript Objects</title>
 </head>
 <body>
-     <p id="demo"></p>
-     <p> Accesing object's values will be taught later in the course. </p>
-     
-     <script>
-     var apple = {
-     color: "red",
-     isSweet: true, 
-     cavity: "yes"
-     };
-     
+    <div class="container">
+        <h4>What is an Object</h4>
+        <p>
+            An <b>object</b> is a collection of related data and/or functionality. <br>
+            Most of the time, creating an <b>object</b> begins with defining a variable. <br>
 
+        </p>
+        <p>
+            // sample object this will not print on the browers <br>
+            var person = { <br>
+                fullname: "Hi Hello", <br>
+                age: 22, <br>
+                hobbies: ["coding","playing chess", "gaming"],<br>
+                isMarried: true <br>
+            } <br><br>
 
-     document.getElementBtId("demo").innerHTML =
-     "Apple" ;
-     //"Apple color is " + apple.color +
-    // "<br> is Apple sweet ? " + apple.isSweet +
-    // "<br> is Apple can prevent cavity ? " + apple.cavity;
-     </script> 
+            As you can see, the syntax of an object is pretty simple. <br>
+            The <i>person</i> object contains <b>properties</b>. <br>
+            Each property has a <i>name</i> (e.g <i>fullname, age</i>) and a <i>value</i> (e.g <i>"Hi Hello", 30</i>). <br>
+            <b>Properties</b> are separated by commas ( , ). <br>
+            The <i>name</i> and <i>value</i> pair are separated by a collon ( : ).
+        </p>
+
+        <h4>Methods in an Object</h4>
+        <p>
+            An object can also contain <b>functions</b> (methods).
+
+            <p>
+                var person = { <br>
+                    fullname : "Hi Hello", <br>
+                    age : 22, <br>
+                    showName : function(){ <br>
+                        alert(this.fullname); <br>
+                    }, <br>
+                    showAge : function() { <br>
+                        alert(this.age); <br>
+                    } <br>
+                }
+            </p>
+
+        </p>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 </body>
 </html>
