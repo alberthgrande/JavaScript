@@ -2,14 +2,16 @@
 
 Learning Javascript lesson progress.
 
-Updated Arithmetic Operators.
+JavaScript Arithmetic Operators.
 
-Updated Comparison Operators.
+JavaScript Comparison Operators.
 
-Updated Logical Conditional.
+ JavaScript Logical Conditional.
 
-Updated JavaScript Funtions.
+ JavaScript Funtions.
 
-Updated JavaScript Objects.
+ JavaScript Objects.
 
-Updated Javascript String.
+ Javascript String.
+ 
+ JavaScript String Methods.
