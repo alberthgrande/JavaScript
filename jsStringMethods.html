@@ -194,6 +194,138 @@
             </p><hr>
 
             <h4 class="card-title">The <i>substr()</i> Method</h4>
+            <p>
+                The <i><b>substr()</b></i> method extracts a section a string, starting from a specified <i><b>index</b></i>
+                and extending for a given <i><b>length</b></i> afterward. <br>
+                It takes two numerical parameteres: the starting <i><b>index,</b></i> the length -- number of characters to extract. <br><br>
+                Sample Output: 
+                <script>
+                    var str = "The quick brown fox jumps over the lazy dog.";
+                    var result = str.substr(10, 9);
+                    document.write(result);
+                </script>
+            </p><hr>
+
+            <h4 class="card-title">Ommiting the Second Value</h4>
+            <p>
+                if you omit second value of the <i><b>slice , substring</b></i> and <i><b>substr</b></i> ,
+                they will return the rest of the string. <br><br>
+                Sample Output: <p id="ommit"></p>
+                 
+                <script>
+                    var str = "The quick brown fox jumps over the lazy dog.";
+                    var result1 = str.slice(10);
+                    var result2 = str.substring(10);
+                    var result3 = str.substr(10);
+                    document.getElementById("ommit").innerHTML = 
+                    result1 + "<br>" +
+                    result2 + "<br>" +
+                    result3; 
+                </script>
+
+            </p><hr>
+
+            <h4 class="card-title">Replacing String inside a String</h4>
+            <p>
+                The <i><b>replace()</b></i> method repaces the specified text inside a string and returns a new string. <br>
+                It does not modify the original string. <br>
+                It takes two parameters: the <i><b>string</b></i> to <i><b>replace,</b></i> the <i><b>string replacement.</b></i>
+                <br><br>
+                Sample Output:
+                <script>
+                    var str = "Codeliber is nice, I love Codeliber!";
+                    var result = str.replace("Codeliber", "Everyone");
+                    document.write(result);
+                </script>
+                <p>
+                    Notice that only the first occurence of <i><b>"Codeliber"</b></i> was change. <br>
+                    To replace all matching strings, user a regular expresstion <i><b>/g</b></i> flag. <br><br>
+                    Sample Output:
+                    <script>
+                        var str = "Codeliber is nice, I love Codeliber!";
+                        var result = str.replace(/Codeliber/g, "Everyone");
+                        document.write(result);
+                    </script>
+                </p>
+                <p>
+                    Now all occurence of <i><b>"Codeliber"</b></i> are replaced by <i><b>"Everyone".</b></i><br>
+                    <i><b>Note!</b></i> the replace Method is sensitively cased. <br>
+                    To replace text insensitively, use the  <i><b>/i</b></i> flag in the regular expression. <br><br>
+                    Sample Output:
+                    <script>
+                        var str = "Codeliber is nice, I love Codeliber!";
+                        var result = str.replace(/CoDeLiBeR/i, "Everyone");
+                        document.write(result);
+                    </script>
+                </p>
+                <p>
+                    As you may notice, again, it only replaced the first occurence. <br>
+                    To <i><b>replace all insensitively</b></i>, combine the <i><b>/g</b></i>
+                    and <i><b>/i</b></i> flag in the regular expression. <br><br>
+                    Sample Output:
+                    <script>
+                        var str = "Codeliber is nice, I love Codeliber!";
+                        var result = str.replace(/CoDeLiBeR/ig, "Everyone");
+                        document.write(result);
+                    </script>
+                </p>
+            </p><hr>
+
+            <h4 class="card-title">Trimming a String</h4>
+            <p>
+                Trimming means removing the extra whitespace from both ends of a string. <br><br>
+                Sample Output: is using alert() JavaScript method.
+                <script>
+                    var str = "                  I love Codeliber!";
+                    var result = str.trim();
+                    // alert(result);
+                </script>
+            </p><hr>
+
+            <h4 class="card-title">Converting to Upper and Lower Case</h4>
+            <p>
+                To <i><b>toUpperCase()</b></i> method converts the string to upper case. <br>
+                It only returns the converted value and does not modify the original string. <br><br>
+                Sample Output:
+                <script>
+                    var str = "I love CodeLiber!";
+                    var result = str.toUpperCase();
+                    document.write(result);
+                </script>
+                <p>
+                    The <i><b>toLowerCase()</b></i> method converts the string to lower case. <br>
+                    It only returns the converted value and does not modify the original string. <br><br>
+                    Sample Ouput: 
+                    <script>
+                        var str = "I LOVE Codeliber!";
+                        var result = str.toLowerCase();
+                        document.write(result);
+                    </script>
+                </p>
+            </p><hr>
+
+            <h4 class="card-title"> The <i>concat()</i> Method</h4>
+            <p>
+                The <i><b>concat()</b></i> method adds the string argument to the function calling string without modifying the original string. <br>
+                It takes two atguments: the text that would separate the strings, the string to add. <br><br>
+                Sample Output: 
+                <script>
+                    var str = "Lorem";
+                    var result = str.concat(" ", "ipsum");
+                    document.write(result);
+                </script>
+                <p>
+                    In the example above, the strings are separated by a whitespace <i><b>" ".</b></i><br>
+                    You can also use other characters like comma <i><b>( , ).</b></i><br><br>
+                    Sample Output: 
+                    <script>
+                        var str = "Lorem";
+                        var result = str.concat(",", "ipsum");
+                        document.write(result);
+                    </script>
+                </p>
+            </p>
+
 
 
 
