@@ -15,3 +15,5 @@ JavaScript Comparison Operators.
  Javascript String.
  
  JavaScript String Methods.
+
+ JavaScript Numbers.
