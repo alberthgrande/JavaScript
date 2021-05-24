@@ -14,8 +14,63 @@
 
     <div class="container">
         <div class="card">
-            <h4 class="card-header">JavaScript Numbers</h4>
+            <h4 class="card-header">JavaScript Number Methods</h4>
             <div class="card-body">
+                <p class="car-text">
+                    The <i><b>Number</b></i> object provides methods that allow us to work with numerical values.
+                    <h4>The <i>Number.isInteger()</i> Method</h4>
+                    The <i><b>Number.isInteger()</b></i> method returns <i>true</i> if the passed argument (value) is an integer. <br><br>
+                    Sample Output: 
+                    <script>
+                        var num1 = Number.isInteger(21);
+                        var num2 = Number.isInteger(3.21);
+                        var num3 = Number.isInteger("Hello");
+                        document.write("<br>", num1, "<br>", num2, "<br>", num3);
+                    </script>
+                </p><hr>
+
+                <h4>The <i>isNaN() </i>Method</h4>
+                <p class="card-text">
+                    The <i><b>isNaN()</b></i> methods returns <i>true</i> is the passed argument (value) is <i><b>not a legal number.</b></i><br>
+                    Sample Output: <p id="isnan"></p>
+                    <script>
+                        var num1 = isNaN(21);
+                        var num2 = isNaN(3.21);
+                        var num3 = isNaN("Hello World!");
+                        var num4 = isNaN("three");
+                        var num5 = isNaN(12 / "three");
+                        document.getElementById("isnan").innerHTML = 
+                        (num1) + "<br>" + 
+                        (num2) + "<br>" +
+                        (num3) + "<br>" +
+                        (num4) + "<br>" +
+                        (num5);
+                    </script>
+                </p><hr>
+
+                <h4>The <i>parseInt()</i> Method</h4>
+                <p class="card-text">
+                    The <i><b>parsInt()</b></i> method takes a string argument (value) and returns an integer based on the given value. <br>
+                    Sample Output: <p id="parseInt"></p>
+                    <script>
+                        var num1 = parseInt("21");  // return 21
+                        var num2 = parseInt("3.21"); // return 3
+                        var num3 = parseInt("21 days"); // return 21
+                        var num4 = parseInt("3 months and 21 days"); // return 3
+                        var num5 = parseInt("months 3"); // return NaN
+                        var num6 = parseInt("I lova Codeliber!"); // return NaN
+                        document.getElementById("parseInt").innerHTML = 
+                        (num1) + "<br>" +
+                        (num2) + "<br>" +
+                        (num3) + "<br>" +
+                        (num4) + "<br>" +
+                        (num5) + "<br>" +
+                        (num6) ;
+                    </script>
+                    Notice that only the firt number is return if the next characters are not numbers. <br>
+                    Also, it returns NaN if the argument cannot be converted.
+                </p><hr>
+
             </div>
         </div>
     </div>
