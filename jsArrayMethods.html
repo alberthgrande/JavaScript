@@ -252,12 +252,78 @@
                     The <b>splice()</b> method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. <br><br>
                     It takes three or more arguments:
                     <ol>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li> <b>start -</b> the index where the changing begins </li>
+                        <li> <b>deleteCount -</b> the number of the elements to remove and replace from the <b>start</b> </li>
+                        <li> <b>element1, element2, ... - </b> the elements to add to the array </li>
                     </ol>
-                </p>
 
+                    var months = ["January","April","May"]; <br>
+                    months.splice(1, 0, "February", "March"); <br>
+                    document.write(months); <br><br>
+
+                    Sample output: 
+                    <script>
+                        var months = ["January","April","May"];
+                        months.splice(1, 0, "February", "March");
+                        document.write(months);
+                    </script>
+                </p><hr>
+
+                <h4>Removing an Array item</h4>
+                <p class="card-text">
+                    The <b>splice()</b> method can also be used to remove an array item. <br>
+                    To remove item/s, omit the third argument. <br> <br>
+                    To remove a single item, specify the <b>index</b> of the item you want to remove and write <b>1</b> as the value of the <b>second argument.</b> <br><br>
+                    
+                    var months = ["January","February","March","April","May"]; <br>
+                    months.splice(0, 1); // returns "February","March","April","May"<br>
+                    document.write(months); <br> <br>
+
+                    Sample output: 
+                    <script>
+                        var months = ["January","February","March","April","May"];
+                        months.splice(0, 1);
+                        document.write(months);
+                    </script>
+
+                    <br><br>Here's is another examples: <br><br>
+                    var months = ["January","February","March","April","May"];<br>
+                    months.splice(2, 1); // returns "January","February","April","May" <br>
+                    document.write(months);<br><br>
+
+                    Sample outpu: 
+                    <script>
+                        var months = ["January","February","March","April","May"];
+                        months.splice(2, 1); // returns "January","February","April","May"
+                        document.write(months);
+                    </script>
+
+                    <br><br>
+                    To remove <b>multiple items,</b> specify the index where you want to start removing the <b>firt argunebt,</b>
+                    then specify the number of the items tou want to remove in the <b>second argument.</b> <br><br>
+                   
+                    var months = ["January","February","March","April","May"];<br> 
+                    months.splice(0, 2); // returns "March","April","May" <br>
+                    document.write(months);<br><br>
+                    
+                    Sample output: 
+                    <script>
+                        var months = ["January","February","March","April","May"];
+                        months.splice(0, 2); // returns "March","April","May"
+                        document.write(months);
+                    </script>
+
+                    <br><br>Here's is another examples: <br><br>
+
+                    var months = ["January","February","March","April","May"];<br>
+                    months.splice(0, 3); // returns "April","May" <br>
+                    document.write(months);<br><br>
+                    <script>
+                        var months = ["January","February","March","April","May"];
+                        months.splice(0, 3); // returns "April","May"
+                        document.write(months);
+                    </script>
+                </p><hr>
 
 
 
