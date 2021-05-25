@@ -73,33 +73,133 @@
                     It is recommended to use square brackets it's much faster in execution and more readable.
                 </p><hr>
 
+                <h4>Access an Array Item</h4>
+                <p class="card-text">
+                    Array items are accessed using <b>interger.</b><br>
+                    Arrays are <b>zero-indexed.</b>
+                    This means the count starts from <b>0,</b> not from <b>1.</b><br><br>
+                    
+                    var cities = ["Madrid","Berlin","Tokyo"];<br>
+                    document.getElementById("demo5").innerHTML = cities[0]; <br><br>
+                    Sample Output: <p id="demo5"></p>
+                    <script>
+                        var cities = ["Madrid","Berlin","Tokyo"];
+                        document.getElementById("demo5").innerHTML = cities[0];
+                    </script>
 
-                
+                    Notice that <b>cities[0]</b> returned the  <b>first element</b>, which is <b>"Madrid".</b>
+                </p><hr>
 
+                <h4>Add Items to an Array</h4>
+                <p>
+                    The <b>push()</b> method adds one or more elements (items) to the <b>end</b> of an array. <br>
+                    Here's and example of adding a single element: <br>
+                    var cities = ["Madrid","Berlin","Tokyo"]; <br>
+                    cities.push("Rio"); <br><br>
+                    Sample Output: <p id="demo6"></p>
+                    <script>
+                        var cities = ["Madrid","Berlin","Tokyo"];
+                        cities.push("Rio");
+                        document.getElementById("demo6").innerHTML = cities;
+                        cities.push("Rio","Denver","Moscow");
+                        document.write(cities);
+                    </script>
 
+                    <br><br> The <b>unshift()</b> method adds one or more elements (items) to the <b>front</b> of an array. <br>
+                    Here's an example of adding a single element: <br>
+                    var ceties = ["Madrid","Berlin","Tokyo"]; <br>
+                    cities.unshift("Rio"); <br><br>
+                    Sample Output: <p id="demo7"></p>
+                    <script>
+                        var cities = ["Madrid","Berlin","Tokyo"];
+                        cities.unshift("Rio");
+                        document.getElementById("demo7").innerHTML = cities;
+                        cities.unshift("Rio","Denver","Moscow");
+                        document.write(cities);
+                    </script>
+                </p><hr>
 
+                <h4>Remove Items from an Array</h4>
+                <p class="card-text">
+                    The <b>pop()</b> method removes the <b>last elemnt</b> of an array. <br>
+                    var cities = ["Madrid","Berlin","Tokyo","Rio","Dever"];<br>
+                    cities.pop();<br><br>
+                    Sample Output: <p id="demo8"></p>
+                    <script>
+                        var cities = ["Madrid","Berline","Tokyo","Rio","Denver"];
+                        cities.pop();
+                        document.getElementById("demo8").innerHTML = cities; // removes "Denver"
+                    </script>
 
+                    The <b>shift()</b> method removes the <b>first element</b> of an array. <br>
+                    var cities = ["Madrid","Berlin","Tokyo","Rio","Denver"]; <br>
+                    cities.shift();<br><br>
+                    Sample Output: <p id="demo9"></p>
+                    <script>
+                        var cities = ["Madrid","Berlin","Tokyo","Rio","Denver"];
+                        cities.shift(); // removes "Madrid"
+                        document.getElementById("demo9").innerHTML = cities;
+                    </script>
+                </p><hr>
 
+                <h4>Get the length of an Array</h4>
+                <p class="card-text">
+                    The <b>length</b> of an array represnts its number of elements of an array. <br>
+                    var cities =  ["Madrid","Berlin","Tokyo","Rio","Denver"]; <br>
+                    document.getElementById("demo10").innerHTML = cities.length; <br><br>
+                    Sample Output: <p id="demo10"></p>
+                    <script>
+                        var cities = ["Madrid","Berlin","Tokyo","Rio","Denver"];
+                        document.getElementById("demo10").innerHTML = cities.length;
+                    </script>
+                </p><hr>
 
+                <h4>Access the Last Item</h4>
+                <p class="car-text">
+                    To access the last item of an array, deduct <b>1</b> from its <b>length.</b><br>
+                    var cities = ["Madrid","Berlin","Tokyo","Rio","Denver"]; <br>
+                    document.getElementById("demo11").innerHTML = cities[cities.length - 1]; <br><br>
+                    Sample Output: <p id="demo11"></p>
+                    <script>
+                        var cities = ["Madrid","Berlin","Tokyo","Rio","Denver"];
+                        var lastItem = cities[cities.length - 1];
+                        document.getElementById("demo11").innerHTML = lastItem;
+                    </script>
+                </p><hr>
 
+                <h4>Loop Over an Array</h4>
+                <p class="card-text">
+                    Looping over an array means accessing its data <b>individually.</b><br>
+                    We can use the <b>for</b> loop to loop over an array. <br>
+                    var cities = ["Madrid","Berlin","Tokyo","Rio","Denver"];<br>
+                    for (var i = 0; i < cities.length; i++) { <br>
+                        documemnt.getElementById("demo12").innerHTML += citie[i]; <br>
+                    } <br><br>
+                    Sample Output: <p id="demo12"></p>
+                    <script>
+                        var cities = ["Madrid","Berlin","Tokyo","Rio","Denver"];
+                        for(var i = 0; i < cities.length; i++) {
+                            document.getElementById("demo12").innerHTML += cities[i] + "<br>";
+                        }
+                    </script>
+                    Notice that we used the <b>addition assignment (+=)</b> operator with the <b>innerHTML</b> property. <br>
+                    This makes sure that the printed elements do not get overwritten. <br>
+                    Tip! You will learn about JavaScript loops later in the course. <br>
+                </p> <hr>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <h4>Arrays are Objects</h4>
+                <p class="card-text">
+                    The data type of an array is <b>object.</b><br> <br>
+                    var cities = ["Madrid","Berlin0","Tokyo","Rio","Denver"];<br>
+                    var type = typeof cities; // return object <br>
+                    document.getElementById("demo13").innerHTML = type; <br><br>
+                    Sample Output: <p id="demo13"></p>
+                    <script>
+                        var cities = ["Madrid","Berlin0","Tokyo","Rio","Denver"];
+                        var type = typeof cities; // return object
+                        document.getElementById("demo13").innerHTML = type;
+                    </script>
+                </p>
 
             </div>
         </div>
