@@ -3,6 +3,8 @@
 Learning Javascript lesson progress.
  
  JavaScript Arrays.
+ 
+ JavaScript Array Methods, working...
 
  JavaScript Arithmetic Operators.
 
