@@ -24,10 +24,12 @@
                 <p class="car-text">
                     The <b>forEach()</b> method is another way to loop over an array, or acces each element's data. <br>
                     It executes a <b>callback function</b> for each array element. <br><br>
+                   
                     var cities = ["Madrid","Berlin","Tokyo"];<br>
                     cities.forEach(function(val, i, arr){<br>
                         document.write(i + ": " + val + <!--"<br>"-->);<br>
                     }); <br><br>
+                   
                     Sample Output: <br>
                     <script>
                         var cities = ["Madrid","Berlin","Tokyo"];
@@ -52,6 +54,7 @@
                     var cities = ["Madrid","Berlin","Tokyo"]; <br>
                     var str = cities.join(); <br>
                     document.write(str); <br><br>
+                   
                     Sample Output:
                     <script>
                         var cities = ["Madrid","Berlin","Tokyo"];
@@ -63,6 +66,7 @@
                     var cities = ["Madrid","Berlin","Tokyo"]; <br>
                     var str = cities.join("-"); <br>
                     document.write(str); <br><br>
+                   
                     Sample Output: 
                     <script>
                         var cities = ["Madrid","Berlin","Tokyo"];
@@ -81,6 +85,7 @@
                     var string = "Lorem ipsum dolor sit amet.";<br>
                     var arr = string.split(" ");<br>
                     document.write(typeof arr + ": " + arr);<br><br>
+                    
                     Sample Output: 
                     <script>
                         var string = "Lorem ipsum dolor sit amet.";
@@ -94,6 +99,7 @@
                     var string = "Lorem ipsum dolor sit amet.";<br>
                     var arr = string.split("-");<br>
                     document.write(typeof arr + ": " + arr);<br><br>
+                    
                     Sample Output: 
                     <script>
                         var string = "Lorem-ipsum-dolor-sit-amet.";
@@ -107,12 +113,13 @@
                 <h4>Merging Arrays</h4>
                 <p class="card-text">
                     The <b>concat()</b> method merges two or more arrays. <br><br>
+                    
                     var fruits1 = ["Banana","Apple","Orange"]; <br>
                     var fruits2 = ["Grape","Mango","Strawberry"]; <br>
                     var arr =  fruits1.concat(fruits2); <br>
                     document.write(arr); <br> <br>
+                    
                     Sample Output:
-
                     <script>
                         var fruits1 = ["Banana","Apple","Orange"];
                         var fruits2 = ["Grape","Mango","Strawberry"];
@@ -128,6 +135,7 @@
                     //  this part is to concatenate <br>
                     var arr = numbers1.concat(numbers2,numbers3); <br>
                     document.write(arr); <br><br>
+                   
                     Sample Output:
                     <script>
                         var numbers1 = [1,2,3];
@@ -137,15 +145,17 @@
                         var arr = numbers1.concat(numbers2,numbers3);
                         document.write(arr);
                     </script>
-                    <br><br><b>Note!</b> The <i>concat()</i> method does not modify the existing arrays, instead is creates and return a new one.<br>
+                    <br><br><b>Note!</b> The <i>concat()</i> method does not modify the existing arrays, instead it creates and return a new one.<br>
                 </p><hr>
 
                 <h4>Searching an Item</h4>
                 <p class="card-text">
                     The <b><i>indexOf()</i></b> method returns the index of the first occurence of an Item (element) in the array. <br><br>
+                    
                     var fruits = ["Mango","Apple","Orange","Grape","Mango"]; <br>
                     var search = fruits.indexOf("Mango"); // returns 0 <br>
                     document.write(search); <br><br>
+                    
                     Sample Output:
                     <script>
                         var fruits = ["Mango","Apple","Orange","Grape","Mango"];
@@ -154,9 +164,11 @@
                     </script>
 
                     <br><br>The <b><i>lastIndexOf()</i></b> method returns the index of the last occurence of an item (element) in the array. <br><br>
+                   
                     var fruits = ["Mango","Apple","Orange","Grape","Mango"]; <br>
                     var search = fruits.lastIndexOf("Mango"); <br>
                     document.write(search); <br><br>
+                   
                     Sample Output:
                     <script>
                         var fruits = ["Mango","Apple","Orange","Grape","Mango"];
@@ -166,10 +178,12 @@
 
                     <br><br><b>Rememeber! 0</b> is the index of the first element, <b>1</b> is the second element, and so on. <br>
                     Both the <b>indexOf()</b> and <b>lastIndexOf()</b> methods return <b>-1</b> if the item is not found in the array. <br><br>
+                   
                     var fruits = ["Mango","Apple","Orange","Grape","Mango"]; <br>
                     var firstIndex = fruits.indexOf("Strawberry"); // returns -1 <br>
                     var lastIndex = fruits.lastIndexOf("Strawberry"); // returns -1 <br>
                     document.write(firstIndex , lastIndex); <br><br>
+                   
                     Sample Output: <br>
                     <script>
                         var fruits = ["Mango","Apple","Orange","Grape","Mango"];
@@ -182,7 +196,66 @@
                     
                     <br><br> To check if a <b>value</b> exist in an array, use the <b>includes()</b> method. <br>
                     The <b>include()</b> method returns <b>true</b> if a certain value is include in an array. <br><br>
+                    
+                    var cities = ["Madrid","Berlin","Tokyo"]; <br>
+                    var city1 = cities.includes("Madrid"); // return true <br>
+                    var city2 = cities.includes("Manila"); // return false <br>
+                    document.write("City1: " + city1 + ", City2: " + city2 ); <br><br>
 
+                    Sample Output:
+                    <script>
+                        var cities = ["Madrid","Berlin","Tokyo"];
+                        var city1 = cities.includes("Madrid"); // return true
+                        var city2 = cities.includes("Manila"); // return false
+
+                        document.write("City1: " + city1 + ", City2: " + city2 );
+                    </script>
+
+                </p><hr>
+
+                <h4>Slicing an Array</h4>
+                <p class="card-text">
+                    The <b>slice()</b> method returns a new copy of a section of an array. <br>
+                    It takes two arguments: <br>
+                    <ol>
+                        <li> <b>begin</b> - the index where the extraction begins </li>
+                        <li> <b>end</b> -  the index where the extraction should end (it is not include in the new array)</li>
+                    </ol>
+
+                    var cities = ["Madrid","Berlin","Tokyo","Rio","Denver"]; <br>
+                    var arr = cities.slice(0, 2); // return "Madrid", "Berlin" <br>
+                    document.write(arr); <br> <br>
+                    
+                    Sample Output:
+                    <script>
+                        var cities = ["Madrid","Berlin","Tokyo","Rio","Denver"];
+                        var arr = cities.slice(0, 2); // return "Madrid", "Berlin"
+                        document.write(arr);
+                    </script>
+                     
+                     <br><br>Here's is another example: <br><br>
+                     var cities = ["Madrid","Berlin","Tokyo","Rio","Denver"]; <br>
+                     var arr = cities.slice(1, 4); // returns "Berlin","Tokyo","Rio" <br>
+                     document.write(arr); <br><br>
+                     Sample output:
+                     <script>
+                         var cities = ["Madrid","Berlin","Tokyo","Rio","Denver"];
+                         var arr = cities.slice(1, 4); // returns "Berlin","Tokyo","Rio"
+                         document.write(arr);
+                     </script>
+
+                    <br><br><b>Note!</b> The <i>slice()</i> method does not modify the existing arrays, instead it creates and return a new one.<br>
+                </p><hr>
+
+                <h4>Splicing an Arrays</h4>
+                <p class="card-text">
+                    The <b>splice()</b> method changes the contents of an array by removing or replacing existing elements and/or adding new elements in place. <br><br>
+                    It takes three or more arguments:
+                    <ol>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ol>
                 </p>
 
 
