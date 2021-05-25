@@ -1,10 +1,12 @@
 # JavaScript
 
 Learning Javascript lesson progress.
+ 
+ JavaScript Arrays.
 
-JavaScript Arithmetic Operators.
+ JavaScript Arithmetic Operators.
 
-JavaScript Comparison Operators.
+ JavaScript Comparison Operators.
 
  JavaScript Logical Conditional.
 
