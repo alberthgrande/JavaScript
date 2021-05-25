@@ -1,18 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <title>JavaScript Array</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>JavaScript Arrays</title>
 </head>
 <body>
-    <p id="demo"></p>
-    <p> Accesing array's values will be taught later in the course. </p>
-    <script>
-     var arrayColor = ["black","white","gray"];
-     document.getElementById("demo").innerHTML =
-     "Array Colors <br>" +
-     arrayColor[0] + "<br>" +
-     arrayColor[1] + "<br>" +
-     arrayColor[2];
-    </script>
+
+    <div class="container">
+        <div class="card">
+            <h4 class="card-header">JavaScript Arrays</h4>
+            <div class="card-body">
+                <p class="card-text">
+                    JavaScript <b>arrays</b> are list-like object. <br>
+                    A single array can be store multiple data. <br><br>
+                    Sample Output: <p id="demo"></p>
+                    <script>
+                        var fruits = ["Apple","Bananas", "Orange"];
+                        document.getElementById("demo").innerHTML = fruits;
+                    </script>
+                    In the example above, one variable holds three values. <br>
+                    This is what makes arrays specials, it can hold many values. <br>
+                    Instead of storing multiple data like this: <br><br>
+
+                        var person1 = "Sergio"; <br>
+                        var person2 = "Andres"; <br>
+                        var person3 = "Selena"; <br>
+                        var person4 = "Anibai"; <br><br>
+                        Sample Output: <p id="demo1"></p>
+
+                    <script>
+                        var person1 = "Sergio"; 
+                        var person2 = "Andres"; 
+                        var person3 = "Selena"; 
+                        var person4 = "Anibai"; 
+                        document.getElementById("demo1").innerHTML = person1 + "," + person2 + "," + person3 + "," + person4;
+                    </script>
+
+                        We can just store multiple data like this: <br>
+                        var person = ["Sergio", "Andres", "Selena", "Anibai"]; <br><br>
+                        Sample Output: <p id="demo2"></p>
+                        <script>
+                            var person = ["Sergio", "Andres", "Selena", "Anibai"];
+                            document.getElementById("demo2").innerHTML = person;
+                        </script>
+                        Much efficient, right ?
+                </p><hr>
+
+                <h4>Create an Array</h4>
+                <p class="card-text">
+                    Arrays are created with square brackets <b>[]</b> and data are separated with commas, <b>( , ).</b><br><br>
+
+                         var cities = ["Madrid", "Berlin", "Tokyo"]; <br><br>
+                         Sample Output: <p id="demo3"></p>
+                         <script>
+                             var cities = ["Madrid", "Berlin", "Tokyo"];
+                             document.getElementById("demo3").innerHTML = cities;
+                         </script>
+                    Another way of creating an array is the <b>Array()</b> constructor. <br>
+                         
+                         var cities = new Array("Madrid", "Berlin", "Tokyo"); <br><br>
+                         Sample Output: <p id="demo4"></p>
+                         <script>
+                             var cities = new Array("Madrid","Berlin","Tokyo");
+                             document.getElementById("demo4").innerHTML = cities;
+                         </script>
+                    It is recommended to use square brackets it's much faster in execution and more readable.
+                </p><hr>
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 </body>
 </html>
