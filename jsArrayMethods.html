@@ -23,30 +23,167 @@
                 <h4>The <i>forEach()</i> Method</h4>
                 <p class="car-text">
                     The <b>forEach()</b> method is another way to loop over an array, or acces each element's data. <br>
-                    It executes a <b>callback function</b> for each array element.
+                    It executes a <b>callback function</b> for each array element. <br><br>
+                    var cities = ["Madrid","Berlin","Tokyo"];<br>
+                    cities.forEach(function(val, i, arr){<br>
+                        document.write(i + ": " + val + <!--"<br>"-->);<br>
+                    }); <br><br>
+                    Sample Output: <br>
+                    <script>
+                        var cities = ["Madrid","Berlin","Tokyo"];
+                        cities.forEach(function(val, i, arr){
+                            document.write(i + ": " + val + "<br>");
+                        });
+                    </script>
+                    The callback function is invoked with 3 arguments. <br>
+                    <ol>
+                        <li> The <i>value</i> of the element. </li>
+                        <li> The <i>index</i> of the element. </li>
+                        <li> The <i>array</i> itself. </li>
+                    </ol>
+                </p><hr>
+
+                <h4> Arrays to Strings </h4>
+                <p class="card-text">
+                    The <i>join()</i> method creates and returns a new string by combining all the elements. <br>
+                    The elements ate separated by the specified separator charater. <br>
+                    If none is specified, it separates the elements with commas. <br><br>
+
+                    var cities = ["Madrid","Berlin","Tokyo"]; <br>
+                    var str = cities.join(); <br>
+                    document.write(str); <br><br>
+                    Sample Output:
+                    <script>
+                        var cities = ["Madrid","Berlin","Tokyo"];
+                        var str = cities.join();
+                        document.write(str);
+                    </script>
+
+                    Here's is an example with specified separator: <br>
+                    var cities = ["Madrid","Berlin","Tokyo"]; <br>
+                    var str = cities.join("-"); <br>
+                    document.write(str); <br><br>
+                    Sample Output: 
+                    <script>
+                        var cities = ["Madrid","Berlin","Tokyo"];
+                        var str = cities.join("-");
+                        document.write(str);
+                    </script>
+                    <b>Note!</b> The <i>join()</i> method does not modify the existing arrays, instead it create and returns a new one. <br>
+                </p><hr>
+
+                <h4>Strings to Arrays</h4>
+                <p class="card-text">
+                    It is also possible to convert a <b>string</b> into a <b>array,</b> this can be done using the <b>split()</b> method. <br>
+                    The <b>split()</b> method takes a <b>separator</b> string as its argument. <br>
+                    The method splits the string at each point where the <b>separator</b> occurs. <br><br>
+                    
+                    var string = "Lorem ipsum dolor sit amet.";<br>
+                    var arr = string.split(" ");<br>
+                    document.write(typeof arr + ": " + arr);<br><br>
+                    Sample Output: 
+                    <script>
+                        var string = "Lorem ipsum dolor sit amet.";
+                        var arr = string.split(" ");
+                        document.write(typeof arr + ": " + arr);
+                    </script>
+
+                    <b>Note!</b> The <i>split()</i> method does not modify the existing string, It creates a new array instead. <br><br>
+                    
+                    Here's another example: <br>
+                    var string = "Lorem ipsum dolor sit amet.";<br>
+                    var arr = string.split("-");<br>
+                    document.write(typeof arr + ": " + arr);<br><br>
+                    Sample Output: 
+                    <script>
+                        var string = "Lorem-ipsum-dolor-sit-amet.";
+                        var arr = string.split("-");
+                        document.write(typeof arr + ": " + arr);
+                    </script>
+                    
+                    <b>Remember!</b> The data type of <i>arrays</i> is <i>object.</i>
+                </p><hr>
+
+                <h4>Merging Arrays</h4>
+                <p class="card-text">
+                    The <b>concat()</b> method merges two or more arrays. <br><br>
+                    var fruits1 = ["Banana","Apple","Orange"]; <br>
+                    var fruits2 = ["Grape","Mango","Strawberry"]; <br>
+                    var arr =  fruits1.concat(fruits2); <br>
+                    document.write(arr); <br> <br>
+                    Sample Output:
+
+                    <script>
+                        var fruits1 = ["Banana","Apple","Orange"];
+                        var fruits2 = ["Grape","Mango","Strawberry"];
+                        // this part is to concatenate
+                        var arr =  fruits1.concat(fruits2);
+                        document.write(arr);
+                    </script>
+
+                    To concatenate three or more arrays, separate the arrays with commas. <br><br>
+                    var numbers1 = [1,2,3]; <br>
+                    var numbers2 = [4,5,6]; <br>
+                    var numbers3 = [7,8,9];
+                    //  this part is to concatenate <br>
+                    var arr = numbers1.concat(numbers2,numbers3); <br>
+                    document.write(arr); <br><br>
+                    Sample Output:
+                    <script>
+                        var numbers1 = [1,2,3];
+                        var numbers2 = [4,5,6];
+                        var numbers3 = [7,8,9];
+                        //  this part is to concatenate
+                        var arr = numbers1.concat(numbers2,numbers3);
+                        document.write(arr);
+                    </script>
+                    <br><br><b>Note!</b> The <i>concat()</i> method does not modify the existing arrays, instead is creates and return a new one.<br>
+                </p><hr>
+
+                <h4>Searching an Item</h4>
+                <p class="card-text">
+                    The <b><i>indexOf()</i></b> method returns the index of the first occurence of an Item (element) in the array. <br><br>
+                    var fruits = ["Mango","Apple","Orange","Grape","Mango"]; <br>
+                    var search = fruits.indexOf("Mango"); // returns 0 <br>
+                    document.write(search); <br><br>
+                    Sample Output:
+                    <script>
+                        var fruits = ["Mango","Apple","Orange","Grape","Mango"];
+                        var search = fruits.indexOf("Mango"); // returns 0
+                        document.write(search);
+                    </script>
+
+                    <br><br>The <b><i>lastIndexOf()</i></b> method returns the index of the last occurence of an item (element) in the array. <br><br>
+                    var fruits = ["Mango","Apple","Orange","Grape","Mango"]; <br>
+                    var search = fruits.lastIndexOf("Mango"); <br>
+                    document.write(search); <br><br>
+                    Sample Output:
+                    <script>
+                        var fruits = ["Mango","Apple","Orange","Grape","Mango"];
+                        var search = fruits.lastIndexOf("Mango");
+                        document.write(search);
+                    </script>
+
+                    <br><br><b>Rememeber! 0</b> is the index of the first element, <b>1</b> is the second element, and so on. <br>
+                    Both the <b>indexOf()</b> and <b>lastIndexOf()</b> methods return <b>-1</b> if the item is not found in the array. <br><br>
+                    var fruits = ["Mango","Apple","Orange","Grape","Mango"]; <br>
+                    var firstIndex = fruits.indexOf("Strawberry"); // returns -1 <br>
+                    var lastIndex = fruits.lastIndexOf("Strawberry"); // returns -1 <br>
+                    document.write(firstIndex , lastIndex); <br><br>
+                    Sample Output: <br>
+                    <script>
+                        var fruits = ["Mango","Apple","Orange","Grape","Mango"];
+
+                        var firstIndex = fruits.indexOf("Strawberry"); // returns -1
+                        var lastIndex = fruits.lastIndexOf("Strawberry"); // returns -1
+
+                        document.write(firstIndex + "<br>" + lastIndex);
+                    </script>
+                    
+                    <br><br> To check if a <b>value</b> exist in an array, use the <b>includes()</b> method. <br>
+                    The <b>include()</b> method returns <b>true</b> if a certain value is include in an array. <br><br>
+
                 </p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
