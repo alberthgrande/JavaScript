@@ -50,12 +50,26 @@
                         <li> <b>array - </b> the array itself</li>
                     </ul>
                     The <b>index</b> and <b>array</b> variables can be omitted. <br><br>
-                    <b>Note!</b> You can name the variables the way you like, as long as the names are not a <b>reserved keyword.</b>
-                </p>
+                    <b>Note!</b> You can name the variables the way you like, as long as the names are not a <b>reserved keyword.</b> <br><br>
+                    
+                    var fruits = ["Apples","Bananas","Oranges"]; <br>
+                    fruits.forEach(function(value, index, array) { <br>
+                        document.getElementById("demo").innerHTML += "<p> Index: " + index + "Value: " + value + "</p>" ; <br>
+                    }); <br><br>
+                    
+                    Here is an example: <p id="demo"></p>
+                    <script>
+                        var fruits = ["Apples","Bananas","Oranges"];
+                        fruits.forEach(function(value, index, array) {
+                            document.getElementById("demo").innerHTML += "<p> Index: " + index + "<br> Value: " + value + "</p>" ;
+                        });
+                    </script>
+                </p><hr>
+
                 <h4>Using <i>map()</i> Method</h4>
                 <p class="card-text">
                     The <b><i>map()</i></b> function creates a new array. <br><br>
-                    Each element in the new array is changed using the logic in the <b>provided function.</b><br>br
+                    Each element in the new array is changed using the logic in the <b>provided function.</b><br>
                     The <b>provided function</b> accepts one to three arguments. <br>
                     <ul>
                         <li> <b>value - </b> the current element being processed </li>
@@ -64,12 +78,29 @@
                     </ul> 
 
                     The <b>index</b> and <b>array</b> arguments can be ommited. <br>
-                    In this example, each element in the <b>numbers</b> array is multiplied <b>2.</b>
+                    In this example, each element in the <b>numbers</b> array is multiplied <b>2.</b> <br><br>
+
+                    var numbers = [10,20,30,40,50]; <br>
+                    var numbersTimesTwo = numbers.map(function(value) { <br>
+                        return value * 2; <br>
+                    }); <br>
+                    document.getElementById("demo2").innerHTML = numbersTimesTwo; <br><br>
+
+                    Sample output: <p id="demo2"></p1demo2>
 
                     <script>
                         var numbers = [10,20,30,40,50];
+                        var numbersTimesTwo = numbers.map(function(value) {
+                            return value * 2;
+                        });
+                        document.getElementById("demo2").innerHTML = numbersTimesTwo;
+                    </script><br><br>
+                    <b>Note!</b> The <b>map()</b> function does not modify the existing array.
+                </p><hr>
 
-                    </script>
+                <h4>Using <i>filter()</i> Method</h4>
+                <p class="card-text">
+                    The <b>filter()</b> method creates a new array.
                 </p>
             </div>
         </div>
