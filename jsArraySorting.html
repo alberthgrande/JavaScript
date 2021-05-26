@@ -23,9 +23,117 @@
                 <h4> The <i>sort()</i> Method </h4>
                 <p class="card-text">
                     The <b>sort()</b> method sorts the elements of an array. <br>
-                    <b>Assending is the default sort order.</b>
-                </p>
+                    <b>Assending</b> is the default sort order. <br>
+                    In the example below, the array sorted <b>alphabetically.</b><br><br>
+                    
+                    var fruits = ["Banana", "Apple", "Durian", "Cherries"]; <br>
+                    fruits.sort(); <br>
+                    document.write(fruits); <br><br>
 
+                    Sample output:
+
+                    <script>
+                        var fruits = ["Banana", "Apple", "Durian", "Cherries"];
+                        fruits.sort();
+                        document.write(fruits);
+                    </script>
+                </p><hr>
+
+                <h4>The Compare Function</h4>
+                <p class="card-text">
+                    The <b>sort()</b> method can take one argument, a <b>compare function.</b> <br><br>
+                    The <b>compare function</b> defines the sort order. <br>
+                    If it ommitted (like in the example above), array elements are converted to string the sorted according to each character's
+                    <b>Unicode</b> code point value. <br>
+                    The <b>compareFunction()</b> comes with two argument <b>a</b> and <b>b.</b> <br>
+                    If <b>a</b> and <b>b</b> are two elements being compared then: <br>
+                    
+                    <ul>
+                        <li> If <b>compareFunction(a, b)</b> returns less than 0, <b>a</b> comes first. </li>
+                        <li> If <b>compareFunction(a, b)</b> returns 0, <b>a</b> and <b>b</b> are unchange. </li>
+                        <li> If <b>compareFunction(a, b)</b> returns greater than 0, <b>b</b> comes first. </li>
+                    </ul>
+                    
+                    The examples below use compare function. <br>
+
+                    <h4>Sorting Numbers</h4>
+                    <p class="card-text">
+                        To sort numbers in an array, we should us a compare function. <br>
+                        In the example below, the numbers are sorted in <b>asscending order.</b> <br><br>
+                        
+                        var numbers = [5, 3, 1, 2, 4]; <br>
+                        numbers.sort(function(a, b){ <br>
+                            return a - b; <br>
+                        }); <br>
+                        document.write(numbers); <br><br>
+                        
+                        Sample output:
+                        <script>
+                            var numbers = [5, 3, 1, 2, 4];
+                            numbers.sort(function(a, b){
+                                return a - b;
+                            });
+                            document.write(numbers);
+                        </script>
+
+                        <br><br> You can also separate your compare fucntion <br><br>
+
+                        var numbers = [5, 3, 1, 2, 4]; <br>
+                            numbers.sort(compareFunction); <br>
+                            function compareFunction(a, b) { <br>
+                                return a - b; <br>
+                            } <br>
+                            document.write(numbers); <br><br>
+
+                        Sample output: 
+                        <script>
+                            var numbers = [5, 3, 1, 2, 4];
+                            numbers.sort(compareFunction);
+                            function compareFunction(a, b) {
+                                return a - b;
+                            }
+                            document.write(numbers);
+                        </script>
+
+                        <br><br>
+                        In the example below, the numbers are sorted in <b>descending order.</b> <br><br>
+
+                        var numbers = [5, 3, 1, 2, 4]; <br>
+                            numbers.sort(function(a, b) { <br>
+                                return b - a; <br>
+                            }); <br>
+                            document.write(numbers); <br><br>
+
+                        Sample output: 
+                        <script>
+                            var numbers = [5, 3, 1, 2, 4];
+                            numbers.sort(function(a, b) {
+                                return b - a;
+                            });
+                            document.write(numbers);
+                        </script>
+
+                        <br><br>
+                        Other way: <br>
+
+                        var numbers = [5, 3, 1, 2, 4]; <br>
+                            numbers.sort(compareFunction); <br>
+                            function compareFunction(a, b) { <br>
+                                return b - a; <br>
+                            } <br>
+                            document.write(numbers); <br><br>
+                            
+                        Sample output: 
+                        <script>
+                            var numbers = [5, 3, 1, 2, 4];
+                            numbers.sort(compareFunction);
+                            function compareFunction(a, b) {
+                                return b - a;
+                            }
+                            document.write(numbers);
+                        </script>
+                    </p>
+                </p>
             </div>
         </div>
     </div>
