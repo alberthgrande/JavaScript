@@ -4,7 +4,9 @@ Learning Javascript lesson progress.
  
  JavaScript Arrays.
  
- JavaScript Array Methodss.
+ JavaScript Array Methods.
+ 
+ JavaScript Array Sorting working...
 
  JavaScript Arithmetic Operators.
 
