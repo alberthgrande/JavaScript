@@ -6,7 +6,11 @@ Learning Javascript lesson progress.
  
  JavaScript Array Methods.
  
- JavaScript Array Sorting working...
+ JavaScript Array Sorting.
+ 
+ JavaScript Array Iteration pending...
+ 
+ JavaScripts Events pending....
 
  JavaScript Arithmetic Operators.
 
