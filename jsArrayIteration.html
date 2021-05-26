@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>JavaScript Array Iteration</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h4 class="card-header">JavaScript Array Methods</h4>
+            <div class="card-body">
+
+                <b>Iterating over an array</b> means performing an operation for each array element. <br><br>
+                 Perfomed operations usually consist of accessing the value of each element. <br><br>
+                <hr>
+                <h4>Using <i>for</i> Loop</h4>
+                <p class="card-text">
+                    The <b>for</b> loop can be used to iterate over an array. <br>
+                    Here is an example: <br><br>
+
+                    var fruits = ["Apples","Bananas","Oranges"]; <br>
+                        for(var i = 0; i < fruits.length; i++){ <br>
+                            document.write(fruits[i] ); <br>
+                        } <br><br>
+
+                    <script>
+                        var fruits = ["Apples","Bananas","Oranges"];
+                        for(var i = 0; i < fruits.length; i++){
+                            document.write(fruits[i] + "<br>");
+                        }
+                    </script>
+                    <br>
+                    <b>Tip!</b> You will learn about <b>loops</b> later in this course.
+                </p><hr>
+
+                <h4>Using <i>forEach()</i> Method</h4>
+                <p class="card-text">
+                    The <b>forEach()</b> method executes a provided function once for each array element. <br><br>
+                    It has one parameter, a <b>callback function.</b> <br><br>
+                    The <b>callback function</b> accepts one to three arguments. <br>
+                    <ul>
+                        <li> <b>value - </b> the current element being processed </li>
+                        <li> <b>index - </b> the index of the current element</li>
+                        <li> <b>array - </b> the array itself</li>
+                    </ul>
+                    The <b>index</b> and <b>array</b> variables can be omitted. <br><br>
+                    <b>Note!</b> You can name the variables the way you like, as long as the names are not a <b>reserved keyword.</b>
+                </p>
+                <h4>Using <i>map()</i> Method</h4>
+                <p class="card-text">
+                    The <b><i>map()</i></b> function creates a new array. <br><br>
+                    Each element in the new array is changed using the logic in the <b>provided function.</b><br>br
+                    The <b>provided function</b> accepts one to three arguments. <br>
+                    <ul>
+                        <li> <b>value - </b> the current element being processed </li>
+                        <li> <b>index - </b> the index of the current element </li>
+                        <li> <b>array - </b> the array itself </li>
+                    </ul> 
+
+                    The <b>index</b> and <b>array</b> arguments can be ommited. <br>
+                    In this example, each element in the <b>numbers</b> array is multiplied <b>2.</b>
+
+                    <script>
+                        var numbers = [10,20,30,40,50];
+
+                    </script>
+                </p>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
