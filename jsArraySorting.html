@@ -133,6 +133,82 @@
                             document.write(numbers);
                         </script>
                     </p>
+                </p> <hr>
+
+                <h4>Get the Highest or Lowest Value</h4>
+                <p class="card-text">
+                    To get the <b>highest</b> value in an array of numbers, sort the element in <b>descending order</b> than get the first value. <br><br>
+                    
+                    var numbers = [5, 3, 1, 2, 4]; <br>
+                    numbers.sort(function(a, b){ <br>
+                        return b - a; <br>
+                    }); <br>
+                    var highest = numbers[0]; // get the first value <br>
+                    document.write(highest);<br><br>
+
+                    Sample output:
+                    <script>
+                        var numbers = [5, 3, 1, 2, 4];
+                        numbers.sort(function(a, b){
+                            return b - a;
+                        });
+                        var highest = numbers[0]; // get the first value
+                        document.write(highest);
+                    </script>
+
+                    <br><br>
+                    Toget the <b>lowest</b> value in an array of numbers, sort the elements in <b>ascending order</b> then get the first value. <br><br>
+                    
+                    var numbers = [5, 3, 1, 2, 4]; <br>
+                    numbers.sort(function(a, b) { <br>
+                        return a - b; <br>
+                    }); 
+                    var lowest = numbers[0]; // get the first value <br>
+                    document.write(lowest); <br><br>
+
+                    Sample output:
+                    <script>
+                        var numbers = [5, 3, 1, 2, 4];
+                        numbers.sort(function(a, b) {
+                            return a - b;
+                        }); 
+                        var lowest = numbers[0]; // get the first value
+                        document.write(lowest);
+                    </script>
+                </p><hr>
+
+                <h4>Sorting an Array of Objects</h4>
+                <p class="card-text">
+                    To sort an array of object, simply coampare the object's numerical properties. <br><br>
+
+                    var students = [ <br>
+                            {name: "John", age: 7}, <br>
+                            {name: "Monica", age: 5}, <br>
+                            {name: "Paul", age: 6} <br>
+                        ]; <br>
+                        students.sort(function(a, b) { <br>
+                            return a.age - b.age;
+                        }); <br>
+                        /* displaying data */ <br>
+                        for(var i = 0; i < students.length; i++){ <br>
+                            document.write("Name: " + students[i].name + " Age: " + students[i].age); <br>
+                        } <br><br>
+
+                    Sample output:
+                    <script>
+                        var students = [
+                            {name: "John", age: 7},
+                            {name: "Monica", age: 5},
+                            {name: "Paul", age: 6}
+                        ];
+                        students.sort(function(a, b) {
+                            return a.age - b.age;
+                        });
+                        /* displaying data */
+                        for(var i = 0; i < students.length; i++){
+                            document.write("<br>Name: " + students[i].name + "<br> Age: " + students[i].age);
+                        }
+                    </script>
                 </p>
             </div>
         </div>
