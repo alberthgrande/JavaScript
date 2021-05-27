@@ -8,7 +8,7 @@ Learning Javascript lesson progress.
  
  JavaScript Array Sorting.
  
- JavaScript Array Iteration working...
+ JavaScript Array Iteration.
  
  JavaScripts Events pending....
 
