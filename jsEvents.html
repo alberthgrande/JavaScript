@@ -17,6 +17,27 @@
         <div class="card">
             <h4 class="card-header">JavaScript Events</h4>
             <div class="card-body">
+                <p class="card-text">
+                    Events are <b>actions</b> that happen in the system you are programming. <br>
+                    The system fires a signal when the events happens, so we can  <b>do something</b> when they do. <br>
+                    For example, we can perform a task when a <b>button is clicked.</b> <br><br>
+
+                    var btn = document.getElementById("btn"); <br>
+                    // the block of codes below is called event handler <br>
+                    btn.onclick = function () {  <br>
+                        alert("The button was clicked, and the task is to show this dialog box."); <br>
+                    } <br><br>
+
+                    Sample output: 
+                    <button class="btn btn-sm btn-primary" id="btn">Click Me!</button>
+                    <script>
+                        var btn = document.getElementById("btn");
+                        // the block of codes below is called event handler
+                        btn.onclick = function () { 
+                            alert("The button was clicked, and the task is to show this dialog box.");
+                        }
+                    </script>
+                </p>
             </div>
         </div>
     </div>
