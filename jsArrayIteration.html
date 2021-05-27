@@ -100,8 +100,37 @@
 
                 <h4>Using <i>filter()</i> Method</h4>
                 <p class="card-text">
-                    The <b>filter()</b> method creates a new array.
+                    The <b>filter()</b> method creates a new array. <br>
+                    The new array only contains the elements that passed the test implemented by the provided <b>provided function.</b><br>
+                    The <b>provided function</b> accepts one to three arguments. <br>
+                    <ul>
+                        <li> <b>value - </b> the current element being processed </li>
+                        <li> <b>index - </b> the index of the current element </li>
+                        <li> <b>array - </b> the array itself</li>
+                    </ul>
+
+                    The <b>index</b> and <b>array</b> arguments can be ommited. <br>
+                    In this example, only the numbers less than <b>4</b> are passed to the new aray. <br><br>
+
+                    var numbers = [1,2,3,4,5]; <br>
+                        var newNum = numbers.filter(function(value){ <br>
+                            return value < 4; <br>
+                        });<br>
+                        document.getElementById("newNum").innerHTML += newNum;<br><br>
+
+                    Sample output: <p id="newNum"></p>
+
+                    <script>
+                        var numbers = [1,2,3,4,5];
+                        var newNum = numbers.filter(function(value){
+                            return value < 4;
+                        });
+                        // document.getElementById("newNum").innerHTML += newNum;
+                        document.write(newNum);
+                    </script>
                 </p>
+
+               
             </div>
         </div>
     </div>
