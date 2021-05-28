@@ -53,6 +53,10 @@
 
                     Another example, when the <b>button</b> is clicked the <b>myFunc()</b> function will be called. <br><br>
 
+                    function myFunc(){ <br>
+                        alert("Hello World!"); <br>
+                    } <br><br>
+
                     Sample output:
                     <button type="button" class="btn btn-sm btn-primary" onclick="myFunc();">Click Me!</button>
                     <script>
@@ -71,8 +75,56 @@
                         <li><b>eventType - </b> a string representing the event type</li>
                         <li><b>listenerFunction - </b> a listener function, it will be called when the event fires</li>
                     </ol>
-                    Here is an example: 
-                    
+
+                    var btn = document.getElementById("btn1"); <br>
+                        btn.addEventListener("click", function() { <br>
+                            alert("The button was clicked, and the task is to show this box.");<br>
+                        });<br><br>
+
+                    Here is an example:  
+
+                    <button id="btn1" class="btn btn-sm btn-primary">Click Me!</button>
+                    <script>
+                        var btn = document.getElementById("btn1");
+                        btn.addEventListener("click", function() {
+                            alert("The button was clicked, and the task is to show this box.");
+                        });
+                    </script>
+                </p><hr>
+
+                <h4>More Event Types</h4>
+                <p class="card-text">
+                    In JavaScript, there are many <b>event types.</b> Here are some of the most useful: 
+
+                    <h4>The <i>change</i> Event</h4>
+                    <p class="card-text">
+                        The <b>change</b> even fires when the values of the <b> &lt;input&gt; , &lt;select &gt;,</b> and <b> &lt;textarea&gt; </b> elements change. <br><br>
+                        The example below gets the value of the <b>&lt;select&gt;</b> element when a value is selected. <br><br>
+
+                        var select = document.getElementById("city"); <br>
+                            select.addEventListener("change", function() { <br>
+                                var val = document.getElementById("city").value;<br>
+                                document.getElementById("demo").innerHTML = val;<br>
+                            });<br><br>
+
+                        <label> Choose a city
+                            <select id="city" name="city" class="custom-select">
+                            <option selected >Open this select menu</option>
+                            <option value="Berlin"> Berlin </option>
+                            <option value="Tokyo"> Tokyo </option>
+                            <option value="Rio"> Rio </option>
+                            <option value="Mumbai"> Mumbai </option>
+                            </select>
+                        </label><br><br>
+                        <p>Sample output: <span id="demo"></span></p>
+                        <script>
+                            var select = document.getElementById("city");
+                            select.addEventListener("change", function() {
+                                var val = document.getElementById("city").value;
+                                document.getElementById("demo").innerHTML = val;
+                            });
+                        </script>
+                    </p>
                 </p>
             </div>
         </div>
