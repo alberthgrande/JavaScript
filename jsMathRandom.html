@@ -40,6 +40,10 @@
                     
                     What if we need to get a random <b>integer</b> between two specified integers ?  Here is how. <br><br>
 
+                    function getRandomInt(min, max) { <br>
+                        document.getElementById("demo1").innerHTML = Math.floor(Math.random() * (max - min) + min); <br>
+                    } <br>
+
                     <p>Sample output: <span id="demo1"></span></p>
                     <button class="btn btn-sm btn-primary" onclick="getRandomInt(1 , 10);">Get a Random Number From 1 to 9 </button>
                     <script>
@@ -55,9 +59,9 @@
                     } <br><br>
                     
                     <p>Sample output: <span id="demo2"></span></p>
-                    <button class="btn btn-sm btn-primary" onclick="getRandomInt(1 , 10);">Get a Random Number From 1 to 10 </button>
+                    <button class="btn btn-sm btn-primary" onclick="getRandomInt1(1 , 10);">Get a Random Number From 1 to 10 </button>
                     <script>
-                        function getRandomInt(min, max) {
+                        function getRandomInt1(min, max) {
                             document.getElementById("demo2").innerHTML = Math.floor(Math.random() * (max - min + 1) + min);
                         }
                     </script>
