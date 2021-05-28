@@ -95,8 +95,19 @@
                     });
 
                     <script>
-                        document.getElementById("submit").addEventListener("click", function(){
-                            var age = parseInt(document.getElementById("age").value);
+                        // document.getElementById("submit").addEventListener("click", function(){
+                        //     var age = parseInt(document.getElementById("age").value);
+                        //     if(age >= 18) {
+                        //         alert("user is old enough to enter");
+                        //     } else {
+                        //         alert("user is NOT old enough to enter");
+                        //     }
+                        // });
+
+                        var submit = document.getElementById("submit");
+
+                        submit.addEventListener("click", function() {
+                            var age = document.getElementById("age").value;
                             if(age >= 18) {
                                 alert("user is old enough to enter");
                             } else {
@@ -104,7 +115,82 @@
                             }
                         });
                     </script>
-                </p> 
+                </p><hr>
+
+                <h4>The <i>else if</i> Statement</h4>
+                <p class="card-text">
+                    The <b>else if</b> statement executes a block of codes if its <b>specified condition</b> is true and the <b>first condition</b> is false. <br><br>
+                    
+                    Syntax: <br><br> 
+                    if(condition) { <br>
+                        // block of codes to be executed when the condition1 is true <br>
+                    } else if(condition) { <br>
+                        // block of codes to be executed when the condition2 is false <br>
+                    } else { <br>
+                        // block of codes to be executed when the condition1 and condition2 are false <br>
+                    } <br><br>
+
+                    Here is a basic example: <br><br>
+
+                    var x = 15; <br>
+                        if(x < 10) { <br>
+                            document.getElementById("demo").innerHTML = "x is less than 10"; <br>
+                        } else if(x > 10) { <br>
+                            document.getElementById("demo").innerHTML = "x is more than 10"; <br>
+                        } else { <br>
+                            document.getElementById("demo").innerHTML = "x is 10 because it's neither less than or more than 10"; <br>
+                        }
+
+
+                    <p>Sample output: <span id="demo"></span></p>
+                    <script>
+                        var x = 15;
+                        if(x < 10) {
+                            document.getElementById("demo").innerHTML = "x is less than 10";
+                        } else if(x > 10) {
+                            document.getElementById("demo").innerHTML = "x is more than 10";
+                        } else {
+                            document.getElementById("demo").innerHTML = "x is 10 because it's neither less than or more than 10";
+                        }
+                    </script>
+
+                    The example below is greets the user depending on the current time of the day. <br><br>
+
+                    If the time is below <b>11:00,</b> it says <b>"Good morning."</b><br><br>
+
+                    If the time is <b>below 18:00 but more than 11:00,</b> it says <b>"Good day."</b> <br><br>
+
+                    Otherwise <b>"Good evening."</b> <br><br>
+
+                    function greetUser(){ <br>
+                        var time = new Date().getHours(); <br>
+                        if(time < 11) { <br>
+                            return "Good morning"; <br>
+                        } else if(time < 18) { <br>
+                            return "Good day"; <br>
+                        } else { <br>
+                            return "Good evening"; <br>
+                        } <br>
+                    } <br>
+                    document.getElementById("demo1").innerHTML = greetUser(); <br><br>
+
+                    <p>Sample output: <span id="demo1"></span></p>
+                    <script>
+                        function greetUser(){
+                            var time = new Date().getHours();
+                            if(time < 11) {
+                                return "Good morning";
+                            } else if(time < 18) {
+                                return "Good day";
+                            } else {
+                                return "Good evening";
+                            }
+                        }
+                        document.getElementById("demo1").innerHTML = greetUser();
+                    </script>
+
+
+                </p>
             </div>
         </div>
     </div>
