@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>JavaScript If Else Statement</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h4 class="card-header">JavaScript If Else Statement</h4>
+            <div class="card-body">
+                In thie lesson, we will study about <b>conditional statements.</b><br>
+                Conditional statements are used to execute code based on different conditions. <br>
+
+                <h4>The <i>if</i> Statement</h4>
+                <p class="card-text">
+                    The <b>if</b> statement executes a block of codes if the given condition is <b>true.</b><br><br>
+
+                    Syntax: <br><br>
+
+                    if(condition) { <br>
+                        // block of codes to be executed when the condition is true <br>
+                    } <br><br>
+
+                    In the example below, if <b>age</b> is <b>more than 18</b> a pop-up dialog will be shown. <br><br>
+                    
+                    Sample code: <br><br>
+
+                    if(age > 18) { <br>
+                        // alert("User is old enough to enter");<br>
+                    }
+
+                    <script>
+                        var age = 21;
+                        if(age > 18) {
+                            // alert("User is old enough to enter");
+                        }
+                    </script>
+                </p><hr>
+
+                <h4>The <i>if...else</i> Statement</h4>
+                <p class="card-text">
+                    The <b>else</b> statement executes a block of codes when the given condition to <i>"if"</i> is <b>false.</b><br><br>
+                    
+                    Syntax: <br><br>
+                    if(condition) { <br>
+                        // block of codes to be executed when the condition is true <br>
+                    } else { <br>
+                        // block of codes to be executed when the condition is false <br>
+                    } <br><br>
+
+                    Here is an example: <br><br>
+                    
+                    var age = 15; <br>
+                        if(age > 18) { <br>
+                            // alert("user is old enough to enter"); <br>
+                        } else { <br>
+                            // alert("user is NOT old enough to enter"); <br>
+                        } <br><br>
+                    <script>
+                        var age = 15;
+                        if(age > 18) {
+                            // alert("user is old enough to enter");
+                        } else {
+                            // alert("user is NOT old enough to enter");
+                        }
+                    </script>
+                </p> 
+            </div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
