@@ -72,6 +72,38 @@
                             // alert("user is NOT old enough to enter");
                         }
                     </script>
+                    Here's an illustrative example, the user will be asked to enter their age. <br><br>
+                    If they are <b>above 18,</b> they will be allowed to enter. <br>
+                    If they are <b>below 18,</b> they will <b>NOT</b> be allowed to enter. <br>
+                    <form>
+                        <label>
+                            How old are you ?
+                            <input type="text" name="age" id="age">
+                        </label>
+                        <button type="button" id="submit" class="btn btn-sm btn-primary">
+                            Submit
+                        </button>
+                    </form><br>
+
+                    document.getElementById("submit").addEventListener("click", function(){ <br>
+                        var age = parseInt(document.getElementById("age").value); <br>
+                        if(age >= 18) { <br>
+                            alert("user is old enough to enter"); <br>
+                        } else { <br>
+                            alert("user is NOT old enough to enter"); <br>
+                        } <br>
+                    });
+
+                    <script>
+                        document.getElementById("submit").addEventListener("click", function(){
+                            var age = parseInt(document.getElementById("age").value);
+                            if(age >= 18) {
+                                alert("user is old enough to enter");
+                            } else {
+                                alert("user is NOT old enough to enter");
+                            }
+                        });
+                    </script>
                 </p> 
             </div>
         </div>
