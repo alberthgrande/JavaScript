@@ -10,7 +10,7 @@ Learning Javascript lesson progress.
  
  JavaScript Array Iteration.
  
- JavaScripts Events working....
+ JavaScripts Events.
 
  JavaScript Arithmetic Operators.
 
@@ -30,7 +30,7 @@ Learning Javascript lesson progress.
  
  JavaScript Number Methods.
  
- JavaScript Math Object pending...
+ JavaScript Math Object working...
  
  JavaScript Math Random pending...
  
