@@ -63,7 +63,62 @@
                         }
                         document.getElementById("demo1").innerHTML = html;
                     </script>
+                    <br>
+                    Notice that both examples above <b>work the same way,</b> but with different approaches.
+                    <hr>
 
+                    <h4>What is <i>for</i> loop ?</h4>
+                    <p class="card-text">
+                        A <b>for</b> loop executes statements <b>repeatedly</b> as long as the sprecified condition is met. <br><br>
+
+                        Syntax: <br><br>
+                        for(initialExpression; condition; incrementExepression) { <br>
+                            // statements or code blocks <br>
+                        }
+                        <ul>
+                            <li> <b>initialExpression - </b> this intializes the loop counter </li>
+                            <li> <b>condition - </b> if it is <b>true</b>, the loop statments execute. if <b>false</b>, the stements don't execute. </li>
+                            <li> <b>incrementExepression - </b> increments the loop counter, runs everytime the statements are executed </li>
+                        </ul>
+
+                        The <b>statement</b> below will run 5 times. <br><br>
+
+                        for(var i = 0; i < 5; i++) { <br>
+                            document.write("&lt;p&gt; Hello World! &lt;/p&gt;"); <br>
+                        } <br><br>
+
+                        Sample output: <br>
+                        <script>    
+                            for(var i = 0; i < 5; i++) 
+                            {
+                                document.write("<p>Hello World!</p>");
+                            }
+                        </script>
+
+                        In the example above, the loop initialized with <b>i = 0.</b><br>
+                        Next, the <b>condition</b> is define, and <b>i</b> must be less than <b>5</b> for the loop to continue to run. <br>
+                        Then, the <b>i++</b> increments the counter everytime the code blocks are executed. <br>
+                        Once <i>i</i> is <b>NO LONGER</b> less than <i>5</i>, the loop stops. <br>
+                        The <b>for</b> loop is commonly used with arrays. <br><br>
+ 
+                        var cities = ["Mumbai", "Abuja", "New York"];<br>
+                        var html = ""; <br>
+                        for(var i = 0; i < cities.length; i++){ <br>
+                            html += "&lt;p&gt;" + cities[i] + "&lt;/p&gt;"; <br>
+                        } <br>
+                        document.getElementById("demo5").innerHTML = html; <br><br>
+
+                        <p>Sample output: <span id="demo5"></span></p>
+                        <script>
+                            var cities = ["Mumbai", "Abuja", "New York"];
+                            var html = "";
+                            for(var i = 0; i < cities.length; i++){
+                                html += "<p>" + cities[i] + "</p>";
+                            }
+                            document.getElementById("demo5").innerHTML = html;
+                            // document.write(html);
+                        </script>
+                    </p>
                 </p>
             </div>
         </div>
