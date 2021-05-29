@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="Description" content="Enter your description here"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
 <title>JavaScript Switch Statement</title>
@@ -175,6 +175,131 @@
                     <b>case</b>, the <i>following statements</i> after the <br>
                     <b>switch</b> will have to wait for the <b>second</b> and <b>third</b> <br>
                     <b>cases</b> to finish running.
+                </p> <hr>
+
+                <h4>The <i>default</i> Clause</h4>
+                <p class="card-text">
+                    The <b>default</b> clause is executed if the <b>expression</b> does not match any <b>case.</b><br><br>
+
+                    Here is simple example: <br><br>
+
+                    var fruit = "lettuce"; <br>
+                        switch(fruit) { <br>
+                            case "apple": <br>
+                            document.write("The color is red."); <br>
+                                break; <br>
+                            case "strawberry": <br>
+                            document.write("The color is pink."); <br>
+                                break; <br>
+                            case "mango": <br>
+                                document.write("The color is yellow."); <br>
+                                break; <br>
+                            default: <br>
+                                document.write("That is not a fruit."); <br>
+                        } <br><br>
+
+                    Sample output: 
+                    <script>
+                        var fruit = "lettuce";
+                        switch(fruit) {
+                            case "apple":
+                            document.write("The color is red.");
+                                break;
+                            case "strawberry":
+                            document.write("The color is pink.");
+                                break;
+                            case "mango":
+                                document.write("The color is yellow.");
+                                break;
+                            default:
+                                document.write("That is not a fruit.");
+                        }
+                    </script>
+                </p> <hr>
+
+                <h4>Illustrative Example</h4>
+                <p class="card-text">
+                    In this example, when the user choose from the dropdwon menu the <b>price</b> of the selectedd <b>fruit</b> will be printed. <br>
+                    If a <b>fruit</b> is not available, the program will tell the user. <br><br>
+                    
+                    <label>
+                        Choose a fruit:
+                        <select class="custom-select" id="fruits"> <!-- <select class="custom-select" id="fruits" onchange="checkPrice()">  -->
+                            <option value="apple"> apple </option>
+                            <option value="banana"> banana </option>
+                            <option value="cherry"> cherry </option>
+                            <option value="mango"> mango </option>
+                            <option value="orange"> orange</option>
+                            <option value="strawberry"> strawberry </option>
+                        </select>
+                    </label>
+                    <p>Sample output: <span id="price1"></span></p>
+                    <script>
+                        // using onchange() function
+                        // function checkPrice() {
+                        //     var fruit = document.getElementById("fruits").value;
+                        //     switch(fruit) {
+                        //         case "apple":
+                        //             var amount = "$1.92";
+                        //             document.getElementById("price1").innerHTML = "The price of " + fruit + " is " + amount;
+                        //             break;
+                        //         case "banana":
+                        //             var amount = "$2.32";
+                        //             document.getElementById("price1").innerHTML = "The price of " + fruit + " is " + amount;
+                        //             break;
+                        //         case "cherry":
+                        //             var amount = "$2.32";
+                        //             document.getElementById("price1").innerHTML = "The price of " + fruit + " is " + amount;
+                        //             break;
+                        //         case "mango":
+                        //             var amount = "$3.11";
+                        //             document.getElementById("price1").innerHTML = "The price of " + fruit + " is " + amount;
+                        //             break;
+                        //         case "orange":
+                        //             var amount = "$2.87";
+                        //             document.getElementById("price1").innerHTML = "The price of " + fruit + " is " + amount;
+                        //             break;
+                        //         default:
+                        //             document.getElementById("price1").innerHTML = "Sorry for the inconveniences, " + fruit + " is currenly not available.";
+                        //             break;
+                        //     }
+                        // } 
+                    </script>
+                    <script>
+                        // using addEventListener(event, function)
+                        var fruit = document.getElementById("fruits");
+                        fruit.addEventListener("change", function() {
+                            var fruitVal = document.getElementById("fruits").value;
+                            switch(fruitVal) {
+                                case "apple":
+                                    var amount = "$1.92";
+                                    document.getElementById("price1").innerHTML = "The price of " + fruit + " is " + amount;
+                                    break;
+                                case "banana":
+                                    var amount = "$2.32";
+                                    document.getElementById("price1").innerHTML = "The price of " + fruit + " is " + amount;
+                                    break;
+                                case "cherry":
+                                    var amount = "$2.32";
+                                    document.getElementById("price1").innerHTML = "The price of " + fruit + " is " + amount;
+                                    break;
+                                case "mango":
+                                    var amount = "$3.11";
+                                    document.getElementById("price1").innerHTML = "The price of " + fruit + " is " + amount;
+                                    break;
+                                case "orange":
+                                    var amount = "$2.87";
+                                    document.getElementById("price1").innerHTML = "The price of " + fruit + " is " + amount;
+                                    break;
+                                default:
+                                    document.getElementById("price1").innerHTML = "Sorry for the inconveniences, " + fruit + " is currenly not available.";
+                                    break;
+                            }
+                        });
+                    </script>
+                    <br><br>
+                    <b>Note!</b> The <i>switch</i> statement uses the <b class="text-primary">identity operator</b> to match the <b>expression</b>
+                    against the value of the <b>case</b> clauses.
                 </p>
                
             </div>
