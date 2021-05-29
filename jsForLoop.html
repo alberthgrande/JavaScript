@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>JavaScript For Loop</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h4 class="card-header">JavaScript For Loop</h4>
+            <div class="card-body">
+                <p class="card-text">
+                    When programming, there are times that we need to run the <b>same statement</b> over and over again. <br>
+                    In this example, we accessed each value of <b>fruits</b> array one-by-one. <br><br>
+
+                    var fruits = ["apple","banana","mango","orange","strawberry"]; <br>
+                        var html = ""; <br>
+
+                        html += "&lt;p&gt;" + fruits[0] + "&lt;/p&gt;"; <br>
+                        html += "&lt;p&gt;" + fruits[1] + "&lt;/p&gt;"; <br>
+                        html += "&lt;p&gt;" + fruits[2] + "&lt;/p&gt;"; <br>
+                        html += "&lt;p&gt;" + fruits[3] + "&lt;/p&gt;"; <br>
+                        html += "&lt;p&gt;" + fruits[4] + "&lt;/p&gt;"; <br>
+
+                        document.getElementById("demo").innerHTML = html; <br>
+
+                    <p>Sample output: <span id="demo"></span></p>
+                    <script>
+                        var fruits = ["apple","banana","mango","orange","strawberry"];
+                        var html = "";
+
+                        html += "<p>" + fruits[0] + "</p>";
+                        html += "<p>" + fruits[1] + "</p>";
+                        html += "<p>" + fruits[2] + "</p>";
+                        html += "<p>" + fruits[3] + "</p>";
+                        html += "<p>" + fruits[4] + "</p>";
+
+                        document.getElementById("demo").innerHTML = html;
+                    </script>
+
+                    The code above can be shortened using the <b>for</b> loop. <br><br>
+
+                    var fruits = ["apple","banana","mango","orange","strawberry"]; <br>
+                        var html = ""; <br>
+                        for(var i = 0; i < fruits.length; i++) { <br>
+                            html +=  "&lt;p&gt;" + fruits[i] + "&lt;/p&gt;"; <br>
+                        } <br>
+                        document.getElementById("demo1").innerHTML = html; <br><br>
+
+                    <p>Sample output: <span id="demo1"></span></p>
+
+                    <script>
+                        var fruits = ["apple","banana","mango","orange","strawberry"];
+                        var html = "";
+                        for(var i = 0; i < fruits.length; i++) {
+                            html +=  "<p>" + fruits[i] + "</p>";
+                        }
+                        document.getElementById("demo1").innerHTML = html;
+                    </script>
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
