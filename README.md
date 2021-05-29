@@ -36,7 +36,7 @@ Learning Javascript lesson progress.
  
  JavaScript Conditional Statement - ( if...else ).
  
- JavaScript Conditional Switch ( switch ) working...
+ JavaScript Conditional Switch ( switch ).
  
  JavaScript For Loop peding...
  
