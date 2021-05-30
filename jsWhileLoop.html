@@ -13,11 +13,160 @@
 
     <div class="container">
         <div class="card">
-            <h4 class="card-header">JavaScript While Loop</h4>
+            <h4 class="card-header">JavaScript Break and Continue</h4>
             <div class="card-body">
+                <p class="card-text">
+                    The <b>while</b>  loop execution statements as long as th given condition evaluates to <b>true.</b> <br><br>
+                    
+                    Syantax: <br><br>
+                    
+                    while(condition){ <br>
+                        // statements or code blocks <br>
+                    } <br>
+                    <ul>
+                        <li> <b>condition - </b> the expression evaluated, 
+                            <br> if it evaluates to <b>true</b>, the code blocks are 
+                            <br> executed. if <b>false</b>,the loops stops </li>
+                        <li> <b>statements - </b> the code blocks to  be <br>
+                            executed as long as the <b>condition</b> is <b>true</b>
+                        </li>
+                    </ul>
+
+                    Here is a basic example: <br><br>
+
+                    var i = 0; <br>
+                        while(i < 3) { <br>
+                            document.write("&lt;p&gt; Hello World! &lt;/p&gt;"); <br>
+                            i++; <br>
+                        } <br><br>
+
+                    Sample output: <br>
+                    <script>
+                        var i = 0;
+                        while(i < 3) {
+                            document.write("<p> Hello World! </p>");
+                            i++;
+                        }
+                    </script>
+
+                    In the example above the <b>statement</b> is executed <b>3 times.</b> <br>
+
+                    It is because the <b>statement</b> only stopped running when <b>i</b> is <b>NO LONGER</b> less than <b>3.</b>
+                </p>
+
+                <h4>Looping Over an Array Using <i>while</i> Loop</h4>
+                <p class="card-text">
+                    To loop over an array, declare a variable that holds the <i>length</i> of the <b>array.</b> <br>
+                    Then use it in the <i>condition.</i> <br><br>
+
+                    var fruits = ["apples","bananas","oranges"];<br>
+                        var len = fruits.length; <br>
+                        var html = ""; <br>
+                        var i = 0; <br>
+
+                        while(i < len) { <br>
+                            html+= "&lt;p&gt;" + fruits[i] + "&lt;/p&gt;"; <br>
+                            i++; <br>
+                        } <br>
+                        document.getElementById("demo").innerHTML = html; <br><br>
+
+                    <p>Sample output: <span id="demo"></span></p>
+
+                    <script>
+                        var fruits = ["apples","bananas","oranges"];
+                        var len = fruits.length;
+                        var html = "";
+                        var i = 0;
+
+                        while(i < len) {
+                            html+= "<p>" + fruits[i] + "</p>";
+                            i++;
+                        }
+                        document.getElementById("demo").innerHTML = html;
+                    </script>
+                </p><hr>
+
+                <h4>The do...while Loop</h4>
+                <p class="card-tex">
+                    The <b>do...while</b> loop executes statements until the test condition evaluates <b>false.</b><br><br>
+
+                    Syntax: <br><br>
+                    do { <br>
+                        // statements or code blocks <br>
+                    }while(condition); <br>
+
+                    <ul>
+                        <li> <b>statements - </b> the code block executed and is re-executed each time the <b>condition</b> is <b>true</b></li>
+                        <li> <b>condition -</b> the expression evaluated, if it evaluates to <b>true,</b> the code blocks re-executed. If <b>false,</b> the loop stops.</li>
+                    </ul>
+
+                    Here is a basic example: <br><br>
+
+                    var i = 0; <br>
+                        do { <br>
+                            document.write("&lt;p&gt; Hello World! &lt;/p&gt;"); <br>
+                            i++; <br>
+                        }while(i < 3); <br><br>
+
+                    Sample output: <br>
+                    <script>
+                        var i = 0;
+                        do {
+                            document.write("<p> Hello World! </p>");
+                            i++;
+                        }while(i < 3);
+                    </script>
+
+                    In the example above the <b>statement</b> is executed <b>3 times.</b><br>
+                    It is because the <b>statement</b> only stopped running when <b>i</b> is <b>NO LONGER</b> less than <b>3.</b>
+
+                    <hr>
+
+                    <h4>Looping Over an Array Using do...while Loop</h4>
+
+                    <p class="card-text">
+                        We can also use do...while loop to loop over an array. <br><br>
+
+                        var cities = ["Berlin","Tokyo","Rio","Denver","Stockholm"]; <br>
+                        var cityLen = cities.length; <br>
+                        var html = ""; <br>
+                        var i = 0; <br>
+
+                        do{ <br>
+                            html += "&lt;p&gt; Someday, I want to go to " + cities[i] + "&lt;/p&gt;"; <br>
+                            
+                            i++; <br>
+                        }while(i < cityLen); <br>
+
+                        document.write(html); <br><br>
+
+                        Sample output:
+
+                        <Script>
+                            var cities = ["Berlin","Tokyo","Rio","Denver","Stockholm"];
+                            var cityLen = cities.length;
+                            var html = "";
+                            var i = 0;
+
+                            do{
+                                html += "<p> Someday, I want to go to " + cities[i] + "</p>";
+                                
+                                i++;
+                            }while(i < cityLen);
+
+                            document.write(html);
+                        </Script>
+                    </p>
+                </p>
+
+
+
+
+
             </div>
         </div>
     </div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
