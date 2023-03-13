@@ -1,3 +1,3 @@
 # JavaScript ES6
 
-    - I came to this lesson to be more familiar with ES6.
+    - I am studying this lesson to be more familiar with JavaScript ES6.
