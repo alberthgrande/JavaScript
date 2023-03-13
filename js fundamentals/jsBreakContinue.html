@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-11/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<title>JavaScript Break and Continue</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h4 class="card-header">JavaScript Break and Continue</h4>
+            <div class="card-body">
+                <p class="card-text">
+                    The <b>break</b> and <b>continue</b> statements are often in <b>loops.</b>
+                    
+                    <h4>The <i>break</i> Statement</h4>
+                    <p class="card-text">
+                        You have already learned that the <b>break</b> statement is used to stop the execution of the <b>switch</b> statement. <br>
+                        In this lesson, you will learn how to use in loops. <br>
+                        The <b>break</b> statement terminates the execution of the current loop. <br>
+                        After termination, the execution proceeds to the next statement following the loop. <br><br>
+
+                        var html = ""; <br>
+
+                        for(var i = 0; i < 10; i ++) { <br>
+                            if(i == 5) { <br>
+                                break; <br>
+                            }
+                            html += "&lt;li&gt; Number " + i + "&lt;/li&gt;"; <br>
+                        } <br>
+                        document.getElementById("demo").innerHTML = html; <br>
+
+                        <p>Sample output: <span id="demo"></span></p>
+                        <script>
+                            var html = "";
+
+                            for(var i = 0; i < 10; i ++) {
+                                if(i == 5) {
+                                    break;
+                                }
+                                html += "<li> Number " + i + "</li>";
+                            }
+                            document.getElementById("demo").innerHTML = html;
+                        </script>
+
+                        As you may noticem instead of printing 10 numbers, only 5 numbers were printed. <br>
+                        It is because when <b>i</b> became equal to <b>5</b> the next iteration was stopped using the <b>break</b> statement. <br>
+                        After that, the program executed the following statement that printed the <b>html</b> string, instead of adding more strings to the <b>html</b> variable. <br>
+                        And the continues the execution of the loop with the <b>next iteration.</b><br>
+
+                        var html = ""; <br>
+                        for(var i = 0; i < 10; i++) { <br>
+                            if(i == 5) { <br>
+                                continue; <br>
+                            } <br>
+                            html += "&lt;li&gt; Number " + i + "&lt;/ li&gt;"; <br>
+                        } <br>
+                        document.getElementById("demo1").innerHTML = html; <br><br>
+
+                        <p>Sample output: <span id="demo1"></span></p>
+                        <script>
+                            var html = "";
+                            for(var i = 0; i < 10; i++) {
+                                if(i == 5) {
+                                    continue;
+                                }
+                                html += "<li> Number " + i + "</li>";
+                            }
+                            document.getElementById("demo1").innerHTML = html;
+                        </script>
+
+                        As you may notice, in the example above, only "Number 5" was missing. <br>
+                        It is because the <b>continue</b> statement terminated the execution of the current iteration when <b>i</b> became equal to <b>5.</b><br>
+                        After that, the program continued the execution of the next iteration.
+                    </p>
+                </p>
+            </div>
+        </div>
+    </div>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

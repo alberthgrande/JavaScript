@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>JavaScript Numbers</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h4 class="card-header">JavaScript Numbers</h4>
+            <div class="card-body">
+
+                <p class="card-text">
+                    In JavaScript, there are two types of numbers.
+                    <ul>
+                        <li>
+                            <i><b>Integer - </b></i> number without decimals
+                        </li>
+                        <li>
+                            <i><b>Floating point -</b></i> number with decimals
+                        </li>
+                    </ul>
+                    Sample Output: 
+                <script>
+                    var num1 = 1; // an integer
+                    var num2 = 2.14 // an floating point
+                    document.write("An Integer ", num1, ", An Floating Point ", num2);
+                </script>
+                </p><hr>
+
+
+
+                <h4 class="card-title">Extra Large or Small Numbers</h4>
+                <p class="card-text">
+                    Very <i><b>large or small</b></i> numbers can be written using <i><b>e-notation</b></i> (exponent notation). <br><br>
+                    Sample Output: 
+                    <script>
+                        var num1 = 212e6; // or 212000000
+                        var num2 = 212e-6; // or .000212
+                        document.write(num1 , " , " , num2);
+                    </script>
+                </p><hr>
+
+                <h4 class="card-title">String as Numbers</h4>
+                <p class="card-text">
+                    JavaScript will try to convert <i><b>numbers</b></i> as posiible. <br> <br>
+                    Sample Output: 
+                    <script>
+                        var difference = "10" - "2";
+                        var product = "10" * "2";
+                        var quotient = "10" / "2";
+                        var sum = "10" + "2";
+                        document.write( "<br>difference " + difference + "<br>" + 
+                                        "product " + product + "<br>" +  
+                                        "quotient " + quotient + "<br>" +  
+                                        "sum " + sum);
+                       
+                    </script>
+                    <p class="card-text">
+                        <br> However, adding numbers as strings <i><b>does not work in addition.</b></i>
+                        Instead, the addition operator will concatenate them as strings.
+                    </p>
+                </p><hr>
+
+                <h4 class="card-title">Performing Operation on Strings and Numbers</h4>
+                <p class="card-text">
+                    Again, JavaScript will try to convert numbers as much as it possibly can. <br><br>
+                    This time, let's show examples where one number is a <i><b>number</b></i> and the other is a <i><b>string.</b></i> <br><br>
+                    Sample Output: 
+                    <script>
+                        var difference = 10 - "2";
+                        var product = "10" * 2;
+                        var quotient = 10 / "2";
+                        var sum = "10" + 2;
+                        var sum1 = 10 + "2";
+                        document.write("<br>difference " + difference + "<br>" + 
+                                        "product " + product + "<br>" +  
+                                        "quotient " + quotient + "<br>" +  
+                                        "sum " + sum + "<br>" + 
+                                        "sum1 " + sum1);
+                    </script>
+                    <p class="card-text">
+                        As you may notice, the above examples worked. <br>
+                        It's because JavaScript was able to convert the <i><b>strings</b></i> to <i><b>numbers</b></i>
+                    </p>
+                </p><hr>
+
+                <h4 class="card-title">Hexadecimal Numbers</h4>
+                <p class="card-text">
+                    Hexadecimal number syntax uses a leading <b>0</b> follow by a letter <b>x.</b><br>
+                    Then followed by characters inside the range of <i><b>(0123456789ABCDEF.)</b></i><br><br>
+                    Smaple Output: <p id="hex""></p>
+                    <script>
+                        var num1 = 0xA;
+                        var num2 = 0xff;
+                        var num3 = 0x123456789ABCDEF;
+
+                        document.getElementById("hex").innerHTML = num1 + "<br>" + num2 + "<br>" + num3;
+                    </script>
+                </p><hr>
+
+                <h4 class="card-title"><i>NaN - </i>Not A Number</h4>
+                <p class="card-text">
+                    <i><b>NaN</b></i> means <b>Not-A-Number.</b> It is a property representiing an ilegal number. <br>
+                    Performing arithmetic operations with non-arethmetic data will return <i><b>NaN.</b></i> <br><br>
+                    Sample Output: 
+                    <script>
+                        var number1 = 10 / "5";
+                        var number2 = 10 / "hello";
+                        document.write("<br>", number1, "<br>", number2);
+                    </script>
+                    <p class="card-text">
+                        Although <i>NaN</i> represent invalid numbers, its data type still <i>numbers.</i><br><br>
+                        Sample Output:
+                        <script>
+                            var type = typeof NaN;
+                            document.write(type);
+                        </script>
+                    </p>
+                </p><hr>
+
+                <h4 class="card-title">The <i>isNaN()</i> Method</h4>
+                <p class="card-text">
+                    The <i>isNaN()</i> method returns <i>true</i> if its argument is not legal <i>number</i>, otherwise false. <br><br>
+                    Sample Output: 
+                    <script>
+                        var num1 = isNaN(5);
+                        var num2 = isNaN("5");
+                        var num3 = isNaN("Hello World!");
+                        var num4 = isNaN("five");
+
+                        document.write("<br>", num1 , "<br>", num2 , "<br>", num3 , "<br>", num4 , "<br>");
+                    </script>
+                </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"></script>
+</body>
+</html>

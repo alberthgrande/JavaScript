@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>JavaScript If Else Statement</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h4 class="card-header">JavaScript If Else Statement</h4>
+            <div class="card-body">
+                In thie lesson, we will study about <b>conditional statements.</b><br>
+                Conditional statements are used to execute code based on different conditions. <br>
+
+                <h4>The <i>if</i> Statement</h4>
+                <p class="card-text">
+                    The <b>if</b> statement executes a block of codes if the given condition is <b>true.</b><br><br>
+
+                    Syntax: <br><br>
+
+                    if(condition) { <br>
+                        // block of codes to be executed when the condition is true <br>
+                    } <br><br>
+
+                    In the example below, if <b>age</b> is <b>more than 18</b> a pop-up dialog will be shown. <br><br>
+                    
+                    Sample code: <br><br>
+
+                    if(age > 18) { <br>
+                        // alert("User is old enough to enter");<br>
+                    }
+
+                    <script>
+                        var age = 21;
+                        if(age > 18) {
+                            // alert("User is old enough to enter");
+                        }
+                    </script>
+                </p><hr>
+
+                <h4>The <i>if...else</i> Statement</h4>
+                <p class="card-text">
+                    The <b>else</b> statement executes a block of codes when the given condition to <i>"if"</i> is <b>false.</b><br><br>
+                    
+                    Syntax: <br><br>
+                    if(condition) { <br>
+                        // block of codes to be executed when the condition is true <br>
+                    } else { <br>
+                        // block of codes to be executed when the condition is false <br>
+                    } <br><br>
+
+                    Here is an example: <br><br>
+                    
+                    var age = 15; <br>
+                        if(age > 18) { <br>
+                            // alert("user is old enough to enter"); <br>
+                        } else { <br>
+                            // alert("user is NOT old enough to enter"); <br>
+                        } <br><br>
+                    <script>
+                        var age = 15;
+                        if(age > 18) {
+                            // alert("user is old enough to enter");
+                        } else {
+                            // alert("user is NOT old enough to enter");
+                        }
+                    </script>
+                    Here's an illustrative example, the user will be asked to enter their age. <br><br>
+                    If they are <b>above 18,</b> they will be allowed to enter. <br>
+                    If they are <b>below 18,</b> they will <b>NOT</b> be allowed to enter. <br>
+                    <form>
+                        <label>
+                            How old are you ?
+                            <input type="text" name="age" id="age">
+                        </label>
+                        <button type="button" id="submit" class="btn btn-sm btn-primary">
+                            Submit
+                        </button>
+                    </form><br>
+
+                    document.getElementById("submit").addEventListener("click", function(){ <br>
+                        var age = parseInt(document.getElementById("age").value); <br>
+                        if(age >= 18) { <br>
+                            alert("user is old enough to enter"); <br>
+                        } else { <br>
+                            alert("user is NOT old enough to enter"); <br>
+                        } <br>
+                    });
+
+                    <script>
+                        // document.getElementById("submit").addEventListener("click", function(){
+                        //     var age = parseInt(document.getElementById("age").value);
+                        //     if(age >= 18) {
+                        //         alert("user is old enough to enter");
+                        //     } else {
+                        //         alert("user is NOT old enough to enter");
+                        //     }
+                        // });
+
+                        var submit = document.getElementById("submit");
+
+                        submit.addEventListener("click", function() {
+                            var age = document.getElementById("age").value;
+                            if(age >= 18) {
+                                alert("user is old enough to enter");
+                            } else {
+                                alert("user is NOT old enough to enter");
+                            }
+                        });
+                    </script>
+                </p><hr>
+
+                <h4>The <i>else if</i> Statement</h4>
+                <p class="card-text">
+                    The <b>else if</b> statement executes a block of codes if its <b>specified condition</b> is true and the <b>first condition</b> is false. <br><br>
+                    
+                    Syntax: <br><br> 
+                    if(condition) { <br>
+                        // block of codes to be executed when the condition1 is true <br>
+                    } else if(condition) { <br>
+                        // block of codes to be executed when the condition2 is false <br>
+                    } else { <br>
+                        // block of codes to be executed when the condition1 and condition2 are false <br>
+                    } <br><br>
+
+                    Here is a basic example: <br><br>
+
+                    var x = 15; <br>
+                        if(x < 10) { <br>
+                            document.getElementById("demo").innerHTML = "x is less than 10"; <br>
+                        } else if(x > 10) { <br>
+                            document.getElementById("demo").innerHTML = "x is more than 10"; <br>
+                        } else { <br>
+                            document.getElementById("demo").innerHTML = "x is 10 because it's neither less than or more than 10"; <br>
+                        }
+
+
+                    <p>Sample output: <span id="demo"></span></p>
+                    <script>
+                        var x = 15;
+                        if(x < 10) {
+                            document.getElementById("demo").innerHTML = "x is less than 10";
+                        } else if(x > 10) {
+                            document.getElementById("demo").innerHTML = "x is more than 10";
+                        } else {
+                            document.getElementById("demo").innerHTML = "x is 10 because it's neither less than or more than 10";
+                        }
+                    </script>
+
+                    The example below is greets the user depending on the current time of the day. <br><br>
+
+                    If the time is below <b>11:00,</b> it says <b>"Good morning."</b><br><br>
+
+                    If the time is <b>below 18:00 but more than 11:00,</b> it says <b>"Good day."</b> <br><br>
+
+                    Otherwise <b>"Good evening."</b> <br><br>
+
+                    function greetUser(){ <br>
+                        var time = new Date().getHours(); <br>
+                        if(time < 11) { <br>
+                            return "Good morning"; <br>
+                        } else if(time < 18) { <br>
+                            return "Good day"; <br>
+                        } else { <br>
+                            return "Good evening"; <br>
+                        } <br>
+                    } <br>
+                    document.getElementById("demo1").innerHTML = greetUser(); <br><br>
+
+                    <p>Sample output: <span id="demo1"></span></p>
+                    <script>
+                        function greetUser(){
+                            var time = new Date().getHours();
+                            if(time < 11) {
+                                return "Good morning";
+                            } else if(time < 18) {
+                                return "Good day";
+                            } else {
+                                return "Good evening";
+                            }
+                        }
+                        document.getElementById("demo1").innerHTML = greetUser();
+                    </script>
+
+
+                </p>
+            </div>
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

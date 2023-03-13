@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>JavaScript Math Random</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h4 class="card-header">JavaScript Math Random</h4>
+            <div class="card-body">
+                <p class="card-text">
+                    In this lesson, you will learn how to generate a random number. <br>
+
+                    <h4>The <i>random()</i> Method</h4>
+                    The <b>Math.random()</b> returns a randon floaring-point (number with decimals) between <b>0</b>
+                    (include) and <b>1</b> (exclude). <br>
+                    To get the random number refresh the page. <br><br>
+
+                    var random = Math.random();<br>
+                    document.getElementById("demo").innerHTML = random;<br><br>
+
+                    <p>Sample output: <span id="demo"></span></p>
+                    <script>
+                        var random = Math.random();
+                        document.getElementById("demo").innerHTML = random;
+                    </script>
+                </p><hr>
+                <h4>Get Random Integer Between Two Numbers</h4>
+                <p class="card-text">
+                    The example above only gets a random <b>floating-point</b> (number with decimals) between <b>0</b>
+                    (inclusive) and <b>1</b> (exclusive). <br><br>
+                    
+                    What if we need to get a random <b>integer</b> between two specified integers ?  Here is how. <br><br>
+
+                    function getRandomInt(min, max) { <br>
+                        document.getElementById("demo1").innerHTML = Math.floor(Math.random() * (max - min) + min); <br>
+                    } <br>
+
+                    <p>Sample output: <span id="demo1"></span></p>
+                    <button class="btn btn-sm btn-primary" onclick="getRandomInt(1 , 10);">Get a Random Number From 1 to 9 </button>
+                    <script>
+                        function getRandomInt(min, max) {
+                            document.getElementById("demo1").innerHTML = Math.floor(Math.random() * (max - min) + min);
+                        }
+                    </script>
+                    <br><br>
+                    To get a random number that also <b>includes the maximum</b> number, use this function. <br><br>
+
+                    function getRandomInt(min, max) { <br>
+                        document.getElementById("demo2").innerHTML = Math.floor(Math.random() * (max - min + 1) + min);<br>
+                    } <br><br>
+                    
+                    <p>Sample output: <span id="demo2"></span></p>
+                    <button class="btn btn-sm btn-primary" onclick="getRandomInt1(1 , 10);">Get a Random Number From 1 to 10 </button>
+                    <script>
+                        function getRandomInt1(min, max) {
+                            document.getElementById("demo2").innerHTML = Math.floor(Math.random() * (max - min + 1) + min);
+                        }
+                    </script>
+
+                </p>
+            </div>
+        </div>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>

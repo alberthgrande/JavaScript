@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>JavaScript String Methods</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h4 class="card-header">JavaScript String Methods</h4>
+            <div class="card-body">
+              <h4 class="card-title">JavaScript String Methods</h4>
+              <p class="card-text">
+                  Now that we know basics of strings, let's move up and try some useful operations that we can do with it.
+              </p><hr>
+              
+              <h4 class="card-title">Strings as Objects</h4>
+              <p class="card-text">
+                  Almost everything in JavaScript is Objects. <br>
+                  When you create a string: <br>
+                  var str = "Hello World!"; <br>
+                  Your variable becomes a String object instance. <br>
+                  As a result, many properties and methods are available to it. <br> 
+              </p><hr>
+
+              <h4 class="card-title">Getting String Length</h4>
+              <p>
+                  To get the length or the number of characters in a string, use the length property. <br><br>
+                  
+                  var str = "codeliber";<br>
+                  var strlen = str.length;<br>
+                  document.write(strlen);<br><br>
+                  
+                  Sample Output:
+                  <script>
+                    var str = "codeliber";
+                    var strlen = str.length;
+                    document.write(strlen);
+                </script>
+
+               <p> 
+                    The example above will print 9 because the string "codeliber" is 9 characters long. <br>
+                    The length property is useful, for instance, you can use it to count how many characters a user has entered in one of your text fields. <br>
+                    It can help you write a program that will tell the user to shorten their entry. <br>
+                </p>
+            </p><hr>
+
+            <h4 class="card-title">Retrieving a Character</h4>
+            <p>
+                We can retrieve a character from a string using the <i><b>square bracket notation</b></i>. <br>
+                Simply put <i><b>square brackets []</b></i> after the variable name and write a number inside them. <br><br>
+                
+                var str = "codeliber";<br>
+                    var x = str[3];<br>
+                    document.write(x);<br><br>
+                
+                Sample Output:
+                <script>
+                    var str = "codeliber";
+                    var x = str[3];
+                    document.write(x);
+                </script>
+
+            <p>
+                You may have expected that str[3] would return the third character <i>"d"</i> from the <i>"codeliber"</i> string. <br>
+                But instead it returned the fourth character which s <i>"e"</i>. <br>
+                It is because JavaScript counts from 0 not from 1. <br>
+                Thus, 0 represents the first character, 1 represents the second character and so on. <br>
+                The number inside the square brackets is called index.
+            </p><hr>
+            </p>
+           
+           
+
+            <h4 class="card-title">Finding a Substring in a String</h4>
+            <p>
+                Sometimes, it is useful to check of a smaller string (substring) is present in a string. <br>
+                This can be done using the <i><b>indexOf()</b></i> method. <br>
+                It returns the index of the <i><b>first</b></i> occurence of a substring in a string. <br><br>
+               
+                var str = "Where are they, where did they go.";<br>
+                    var strpos = str.indexOf("they");<br>
+                    document.write(strpos);<br><br>
+               
+                Sample Outpur:
+                <script>
+                    var str = "Where are they, where did they go.";
+                    var strpos = str.indexOf("they");
+                    document.write(strpos);
+                </script>
+                <p>
+                    The <i><b>lastIndexOf()</b></i> method returns the <i><b>index</b></i> of the <i><b>last</b></i> occurence of the substring in a string. <br><br>
+                    
+                    var str = "Where are they, where did they go.";<br>
+                    var strpos = str.lastIndexOf("they");<br>
+                    document.write(strpos);<br><br>
+
+                    Sample Output: 
+                    <script>
+                        var str = "Where are they, where did they go.";
+                        var strpos = str.lastIndexOf("they");
+                        document.write(strpos);
+                    </script>
+                
+                </p>
+                
+                <p>
+                    Both the <i><b>indexOf()</b></i>  and the <i><b>lastIndexOf()</b></i> methods return <i><b>-1</b></i> if there is no occurence found.
+                    
+                    var str = "Where are they, where did they go.";<br>
+                        var strpos1 = str.indexOf("codeliber");<br>
+                        var strpos2 = str.lastIndexOf("codeliber");<br>
+                        document.getElementById("occur").innerHTML = <br>
+                        "Sample Output: " + strpos1 +
+                        "Sample Output: " + strpos2;<br><br>
+                    
+                    Sample output: <p id="occur"></p>
+                    <script>
+                        var str = "Where are they, where did they go.";
+                        var strpos1 = str.indexOf("codeliber");
+                        var strpos2 = str.lastIndexOf("codeliber");
+                        document.getElementById("occur").innerHTML = 
+                        "Sample Output: " + strpos1 + "<br>" + 
+                        "Sample Output: " + strpos2;
+                    </script><hr>
+                </p>
+               
+            </p>
+           
+
+            <h4>The <i>search()</i> Method</h4>
+            <p>
+                The <i><b>search()</b></i> method works similarly with the <i><b>indexOf</b></i> method. <br>
+                It returns the index of the first occurence of a text in a string. <br><br>
+                
+                var str =  "Where are they, where did they go.";<br>
+                    var strpos = str.search("they");<br>
+                    document.write(strpos);<br><br>
+                
+                Sample Output:
+                <script>
+                    var str =  "Where are they, where did they go.";
+                    var strpos = str.search("they");
+                    document.write(strpos);
+                </script>
+                <p>
+                    The only difference of the <i><b>indexOf()</b></i> and <i><b>search()</b></i> method us that the <i><b>indexOf()</b></i>
+                    method connot take <i><b>regular expression</b></i> as parameter. <br>
+                    You will learn about <i><b>regular expression</b></i> later. <br>
+                    The <i><b>search</b></i> method is <i><b>sensitively cased.</b></i> To search a text insensitivety use a simple regular
+                    expression with the <i></i><b>/i</b></i> flag. <br><br>
+                    
+                    var str = "Hello World!";<br>
+                        var strpos = str.search(/hello/i);<br>
+                        document.write(strpos);<br><br>
+                    
+                    Sample Output: 
+                    <script>
+                        var str = "Hello World!";
+                        var strpos = str.search(/hello/i);
+                        document.write(strpos);
+                    </script>
+                </p>
+              
+                <p>
+                    <i><b>Don't forget.</b></i> The countinh start from 0. Therefore, 0 represent the <i><b>first character</b></i>. <br>
+                    The <i><b>search()</b></i> method returns <i><b>-1</b></i> if the text is not found in the string. <br> <br>
+                    
+                    var str = "Hello World!"; <br>
+                        var strpos = str.search("codeliber");<br>
+                        document.write(strpos);<br><br>
+                    
+                    Sample Output:
+                    <script>
+                        var str = "Hello World!";
+                        var strpos = str.search("codeliber");
+                        document.write(strpos);
+                    </script>
+                </p><hr>
+            </p>
+           
+
+            <h4 class="card-title">Extracting a String</h4>
+            <p>
+                We can extract a substring from a string using the following methods:
+                <ul>
+                    <li>slice (start, end)</li>
+                    <li>substring (start, end)</li>
+                    <li>substr (start, end)</li>
+                </ul>
+            </p><hr>
+
+            <h4 class="card-title">The <i>slice()</i> method</h4>
+            <p>
+                The <i><b>slice()</b></i> method extracts a section of a string and returns it as a new string. <br>
+                It does not modify the original string <br>
+                It takes two numerical parameters the start <i><b>index</b></i> (position), the end <i><b>index</b></i>. <br><br>
+                
+                var str = "The quick brown fox jumps over the lazy dog.";<br>
+                    var result = str.slice(10, 19);<br>
+                    document.write(result);<br><br>
+                
+                Sample Output:
+                <script>
+                    var str = "The quick brown fox jumps over the lazy dog.";
+                    var result = str.slice(10, 19);
+                    document.write(result);
+                </script>
+                <br><br> The <i><b>slice()</b></i> method can take negative value. <br>
+                Negative values start counting from the end of the string. <br><br>
+                
+                var str = "The quick brown fox jumps over the lazy dog."; <br>
+                var result = str.slice(-9, -1); <br>
+                document.write(result);<br><br>
+                
+                Sample Output:
+                <script>
+                    var str = "The quick brown fox jumps over the lazy dog.";
+                    var result = str.slice(-9, -1);
+                    document.write(result);
+                </script>
+            </p><hr>
+
+            <h4>The <i>substring()</i> Method</h4> 
+            <p>
+                The <i><b>substring()</b></i> method the same way as the <i><b>slice()</b></i> method. <br><br>
+                
+                var str = "The quick brown fox jumps over the lazy dog.";<br>
+                var result = str.substring(10, 19);<br>
+                document.write(result);<br><br>
+                
+                Sample Output:
+                <script>
+                    var str = "The quick brown fox jumps over the lazy dog.";
+                    var result = str.substring(10, 19);
+                    document.write(result);
+                </script>
+
+                <p>
+                    The only difference between <i><b>slice()</b></i> and <i><b>substring()</b></i> methods
+                    is that the <i><b>substring()</b></i> method cannot take negative values.
+                </p>
+            </p><hr>
+
+            <h4 class="card-title">The <i>substr()</i> Method</h4>
+            <p>
+                The <i><b>substr()</b></i> method extracts a section a string, starting from a specified <i><b>index</b></i>
+                and extending for a given <i><b>length</b></i> afterward. <br>
+                It takes two numerical parameteres: the starting <i><b>index,</b></i> the length -- number of characters to extract. <br><br>
+                
+                var str = "The quick brown fox jumps over the lazy dog.";<br>
+                var result = str.substr(10, 9);<br>
+                document.write(result);<br><br>
+                
+                Sample Output: 
+                <script>
+                    var str = "The quick brown fox jumps over the lazy dog.";
+                    var result = str.substr(10, 9);
+                    document.write(result);
+                </script>
+            </p><hr>
+
+            <h4 class="card-title">Ommiting the Second Value</h4>
+            <p>
+                if you omit second value of the <i><b>slice , substring</b></i> and <i><b>substr</b></i> ,
+                they will return the rest of the string. <br><br>
+
+                var str = "The quick brown fox jumps over the lazy dog."; <br>
+                var result1 = str.slice(10); <br>
+                var result2 = str.substring(10); <br>
+                var result3 = str.substr(10); <br>
+                document.getElementById("ommit").innerHTML = <br>
+                result1 +  <br>
+                result2 + <br>
+                result3; <br><br>
+
+
+                Sample Output: <p id="ommit"></p>
+                <script>
+                    var str = "The quick brown fox jumps over the lazy dog.";
+                    var result1 = str.slice(10);
+                    var result2 = str.substring(10);
+                    var result3 = str.substr(10);
+                    document.getElementById("ommit").innerHTML = 
+                    result1 + "<br>" +
+                    result2 + "<br>" +
+                    result3; 
+                </script>
+
+            </p><hr>
+
+            <h4 class="card-title">Replacing String inside a String</h4>
+            <p>
+                The <i><b>replace()</b></i> method repaces the specified text inside a string and returns a new string. <br>
+                It does not modify the original string. <br>
+                It takes two parameters: the <i><b>string</b></i> to <i><b>replace,</b></i> the <i><b>string replacement.</b></i>
+                <br><br>
+
+                var str = "Codeliber is nice, I love Codeliber!"; <br>
+                    var result = str.replace("Codeliber", "Everyone"); <br>
+                    document.write(result); <br><br>
+
+                Sample Output:
+                <script>
+                    var str = "Codeliber is nice, I love Codeliber!";
+                    var result = str.replace("Codeliber", "Everyone");
+                    document.write(result);
+                </script>
+                <p>
+                    Notice that only the first occurence of <i><b>"Codeliber"</b></i> was change. <br>
+                    To replace all matching strings, user a regular expresstion <i><b>/g</b></i> flag. <br><br>
+
+                    var str = "Codeliber is nice, I love Codeliber!";<br>
+                        var result = str.replace(/Codeliber/g, "Everyone"); <br>
+                        document.write(result); <br><br>
+
+                    Sample Output:
+                    <script>
+                        var str = "Codeliber is nice, I love Codeliber!";
+                        var result = str.replace(/Codeliber/g, "Everyone");
+                        document.write(result);
+                    </script>
+                </p>
+                <p>
+                    Now all occurence of <i><b>"Codeliber"</b></i> are replaced by <i><b>"Everyone".</b></i><br>
+                    <i><b>Note!</b></i> the replace Method is sensitively cased. <br>
+                    To replace text insensitively, use the  <i><b>/i</b></i> flag in the regular expression. <br><br>
+
+                    var str = "Codeliber is nice, I love Codeliber!"; <br>
+                        var result = str.replace(/CoDeLiBeR/i, "Everyone"); <br>
+                        document.write(result); <br><br>
+                    Sample Output:
+                    <script>
+                        var str = "Codeliber is nice, I love Codeliber!";
+                        var result = str.replace(/CoDeLiBeR/i, "Everyone");
+                        document.write(result);
+                    </script>
+                </p>
+                <p>
+                    As you may notice, again, it only replaced the first occurence. <br>
+                    To <i><b>replace all insensitively</b></i>, combine the <i><b>/g</b></i>
+                    and <i><b>/i</b></i> flag in the regular expression. <br><br>
+
+                    var str = "Codeliber is nice, I love Codeliber!"; <br>
+                    var result = str.replace(/CoDeLiBeR/ig, "Everyone"); <br>
+                    document.write(result); <br><br>
+
+                    Sample Output:
+                    <script>
+                        var str = "Codeliber is nice, I love Codeliber!";
+                        var result = str.replace(/CoDeLiBeR/ig, "Everyone");
+                        document.write(result);
+                    </script>
+                </p>
+            </p><hr>
+
+            <h4 class="card-title">Trimming a String</h4>
+            <p>
+                Trimming means removing the extra whitespace from both ends of a string. <br><br>
+
+                var str = "                  I love Codeliber!"; <br>
+                var result = str.trim(); <br>
+                // alert(result);<br><br>
+
+                Sample Output: is using alert() JavaScript method.
+                <script>
+                    var str = "                  I love Codeliber!";
+                    var result = str.trim();
+                    // alert(result);
+                </script>
+            </p><hr>
+
+            <h4 class="card-title">Converting to Upper and Lower Case</h4>
+            <p>
+                To <i><b>toUpperCase()</b></i> method converts the string to upper case. <br>
+                It only returns the converted value and does not modify the original string. <br><br>
+
+                var str = "I love CodeLiber!"; <br>
+                var result = str.toUpperCase(); <br>
+                document.write(result); <br><br>
+
+                Sample Output:
+                <script>
+                    var str = "I love CodeLiber!";
+                    var result = str.toUpperCase();
+                    document.write(result);
+                </script>
+                <p>
+                    The <i><b>toLowerCase()</b></i> method converts the string to lower case. <br>
+                    It only returns the converted value and does not modify the original string. <br><br>
+
+                    var str = "I LOVE Codeliber!"; <br>
+                    var result = str.toLowerCase(); <br>
+                    document.write(result); <br><br>
+
+                    Sample Ouput: 
+                    <script>
+                        var str = "I LOVE Codeliber!";
+                        var result = str.toLowerCase();
+                        document.write(result);
+                    </script>
+                </p>
+            </p><hr>
+
+            <h4 class="card-title"> The <i>concat()</i> Method</h4>
+            <p>
+                The <i><b>concat()</b></i> method adds the string argument to the function calling string without modifying the original string. <br>
+                It takes two atguments: the text that would separate the strings, the string to add. <br><br>
+                
+                var str = "Lorem"; <br>
+                var result = str.concat(" ", "ipsum"); <br>
+                document.write(result); <br><br>
+
+                Sample Output: 
+                <script>
+                    var str = "Lorem";
+                    var result = str.concat(" ", "ipsum");
+                    document.write(result);
+                </script>
+                <p>
+                    In the example above, the strings are separated by a whitespace <i><b>" ".</b></i><br>
+                    You can also use other characters like comma <i><b>( , ).</b></i><br><br>
+
+                    var str = "Lorem"; <br>
+                        var result = str.concat(",", "ipsum");<br>
+                        document.write(result); <br><br>
+
+                    Sample Output: 
+                    <script>
+                        var str = "Lorem";
+                        var result = str.concat(",", "ipsum");
+                        document.write(result);
+                    </script>
+                </p>
+            </p>
+
+
+            </div>
+          </div>
+    </div>
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
