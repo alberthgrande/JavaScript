@@ -10,16 +10,21 @@
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
       crossorigin="anonymous"
     ></script>
-    <title>Learn How Script Tags and Document Ready Work</title>
+
+    <title>Target the Same Element with Multiple jQuery Selectors</title>
   </head>
   <body>
-    <!-- Only change code above this line -->
-
+    <h1>Target the Same Element with Multiple jQuery Selectors</h1>
     <script>
-      $(document).ready(function () {});
+      $(document).ready(function () {
+        $("button").addClass("animated");
+        $(".btn").addClass("shake");
+        $("#target1").addClass("btn-primary");
+        $("#target1").addClass("animated shake btn-primary");
+      });
     </script>
 
-    <h1>Learn How Script Tags and Document Ready Work</h1>
+    <!-- Only change code above this line -->
 
     <div class="container-fluid">
       <h3 class="text-primary text-center">jQuery Playground</h3>
