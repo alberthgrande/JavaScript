@@ -1,0 +1,9 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding-inline-start: 0;
+}
+body {
+  min-height: 100vh;
+}
