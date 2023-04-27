@@ -4,21 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- jquery -->
     <script
       src="https://code.jquery.com/jquery-3.6.4.min.js"
       integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
       crossorigin="anonymous"
     ></script>
-    <title>Target Elements by Class Using jQuery</title>
+    <link rel="stylesheet" href="style.css" />
+    <title>Use appendTo to Move Elements with jQuery</title>
   </head>
   <body>
+    <h1>Use appendTo to Move Elements with jQuery</h1>
     <script>
       $(document).ready(function () {
-        $("button").addClass("animated bounce");
-        $(".well").addClass("animated shake");
-        $("#target3").addClass("animated fadeOut");
+        $("#target1").css("color", "red");
+        $("#target1").prop("disabled", true);
+        $("#target4").remove();
+        $("#target2").appendTo("#right-well");
       });
     </script>
 
