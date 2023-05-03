@@ -5,3 +5,6 @@ console.log("5" - 1);
 console.log("5" + 1);
 // → 51
 console.log("five" * 2);
+// → NaN
+console.log(false == 0);
+// → true
