@@ -1,0 +1,4 @@
+if (x == "value1") action1();
+else if (x == "value2") action2();
+else if (x == "value3") action3();
+else defaultAction();
